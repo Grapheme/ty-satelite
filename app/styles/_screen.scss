@@ -1,0 +1,73 @@
+.wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        left: 50%;
+        margin-left: -1px;
+        background: #444;
+    } */
+}
+
+.main-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+
+    font-size: 35px;
+    a {
+        margin: 0 20px;
+    }
+
+    .answer-block {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 15%;
+        text-align: center;
+        z-index: 2;
+    }
+
+    .yes-block, .no-block {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        z-index: 1;
+        transition: all .5s ease;
+
+        &.active {
+            left: 0;
+            right: 0;
+        }
+    }
+    
+    .yes-block {
+        left: 0;
+        right: 50%;
+        background: green;
+
+        &.hide {
+            right: 100%;
+        }
+    }
+
+    .no-block {
+        left: 50%;
+        right: 0;
+        background: grey;
+
+        &.hide {
+            left: 100%;
+        }
+    }
+}

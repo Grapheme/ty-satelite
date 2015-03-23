@@ -1,0 +1,28 @@
+extends layout
+
+block content
+  .wrapper
+    .main-screen.js-main-screen
+      .answer-block
+        a(href="#").js-answer-yes Да
+        a(href="#").js-answer-no Нет
+      div
+        .yes-block.js-yes-block
+        .no-block.js-no-block
+    .yes-screen.js-yes-screen
+      .yes-screen__list.js-yes-list
+        .list__cont.js-yes-cont
+          each i in [0,1,2,3,4,5]
+            .yes-screen__option.empty-option-before
+          each i in [0,1,2,3,4,5,6]
+            .yes-screen__option.js-yes-option(data-id="#{i}")
+              .yes-screen__cont
+                .list__other-items
+                  each j in [5,4,3,2,1,0]
+                    .list__other-item.js-ksp(data-td="#{i}" data-tr="#{j}")
+                .list__main-item
+                .list__nav
+                  a(href="#").nav__plus.js-ksp-add +
+                  a(href="#").nav__minus.js-ksp-remove -
+          each i in [0,1,2,3,4,5]
+            .yes-screen__option.empty-option-after

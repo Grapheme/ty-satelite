@@ -1,0 +1,127 @@
+.yes-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    opacity: 0;
+    overflow: hidden;
+    transition: all .5s ease;
+
+    &.active {
+        opacity: 1;
+    }
+
+    .yes-screen__list {
+        display: inline-block;
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        width: 10000px;
+        margin-left: -5000px;
+        font-size: 0;
+        text-align: center;
+        white-space: nowrap;
+        transition: all .5s ease;
+
+        .list__cont {
+            display: inline-block;
+            vertical-align: top;
+            transition: all .5s ease;
+        }
+
+        .yes-screen__option {
+            position: relative;
+            display: inline-block;
+            vertical-align: top;
+            margin: 0 5px;
+            font-size: 16px;
+            width: 150px;
+            height: 365px;
+            transition: all .5s ease;
+
+            .yes-screen__cont {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+            }
+
+            &.empty-option-before, &.empty-option-after {
+                width: 0;
+                transition: all .5s ease;
+
+                &.show {
+                    width: 160px;
+                }
+            }
+        }
+
+        .list__nav {
+            height: 35px;
+            overflow: hidden;
+            transition: all .5s ease;
+            font-size: 35px;
+
+            a {
+                display: none;
+                color: #444;
+                text-decoration: none;
+
+                &.opened {
+                    display: inline-block;
+                } 
+            }
+        }
+
+        .list__main-item {
+            width: 100%;
+            height: 150px;
+            background: url(https://lh3.googleusercontent.com/-9pKY3R2DHL0/AAAAAAAAAAI/AAAAAAAAAAA/odVkxfOJ7vk/photo.jpg);
+            background-size: cover;
+            transition: all .5s ease;
+        }
+
+        .list__other-items {
+            .list__other-item {
+                height: 0;
+                background: url('http://autonews.autoua.net/media/uploads/toyota/toyota-camry-2015-autoua-net_(7).jpg');
+                background-size: cover;
+                transition: all .5s ease;
+
+                &.opened {
+                    height: 20px;
+
+                    &:hover {
+                        height: 100px;
+                    }
+                }
+            }
+        }
+    }
+
+    &.opened {
+        .list__nav {
+            height: 0;
+        }
+        .list__main-item {
+            height: 0;
+        }
+        .yes-screen__option {
+            width: 600px;
+        }
+        .empty-option-before, .empty-option-after {
+            &.show {
+                width: 610px !important;
+            }
+        }
+        .list__other-items {
+            .list__other-item {
+                &.opened {
+                    height: 360px !important;
+                }
+            }
+        }
+    }
+}
