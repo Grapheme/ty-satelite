@@ -18,9 +18,10 @@ Camry.answer = function() {
         block_yes.addClass('active');
         block_no.addClass('hide');
         setTimeout(function(){
+            $('.js-background').fadeOut();
             $('.js-main-screen').fadeOut();
             $('.yes-screen').addClass('active');
-        }, 500);
+        }, 1000);
     }
     var init = function() {
         link_yes.on('click', function(){
@@ -45,15 +46,25 @@ Camry.yesScreen = function() {
         height: 360,
         width: 610
     };
+    this.start = function() {
+        var new_bottom = wrapper.height()/100 * 10;
+        yesCont.attr('style', Help.Transform('translateY(' + new_bottom * (-1) + 'px)'));
+    }
     this.kspNav = function() {
         var addKsp = function(id) {
             var this_block = $('.js-yes-option[data-id="' + id + '"]');
             var this_ksp = this_block.find('.js-ksp');
             if(!this_ksp.filter('.opened').length) {
-                this_ksp.last().addClass('opened');
+                var this_item = this_ksp.last();
+                this_item.addClass('opened');
             } else {
-                this_ksp.filter('.opened').first().prev().addClass('opened');
+                var this_item = this_ksp.filter('.opened').first().prev();
+                this_item.addClass('opened');
             }
+            this_item.addClass('active');
+            setTimeout(function(){
+                this_item.removeClass('active');
+            }, 500);
             setNav();
         }
         var deleteKsp = function(id) {
@@ -126,6 +137,7 @@ Camry.yesScreen = function() {
         })
     }
     this.init = function() {
+        self.start();
         self.setEvents();
         self.kspNav();
     }

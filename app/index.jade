@@ -2,13 +2,17 @@ extends layout
 
 block content
   .wrapper
+    .main-background.yes-background.js-background
     .main-screen.js-main-screen
-      .answer-block
-        a(href="#").js-answer-yes Да
-        a(href="#").js-answer-no Нет
       div
         .yes-block.js-yes-block
+          .block-background
+          .answer-block
+            a(href="#").js-answer-yes Да
         .no-block.js-no-block
+          .block-background
+          .answer-block
+           a(href="#").js-answer-no Нет
     .yes-screen.js-yes-screen
       .yes-screen__list.js-yes-list
         .list__cont.js-yes-cont
@@ -20,6 +24,7 @@ block content
                 .list__other-items
                   each j in [5,4,3,2,1,0]
                     .list__other-item.js-ksp(data-td="#{i}" data-tr="#{j}")
+                      .other-item__background
                 .list__main-item
                 .list__nav
                   a(href="#").nav__plus.js-ksp-add +
