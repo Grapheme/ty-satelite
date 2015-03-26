@@ -1,7 +1,25 @@
 .us-btn {
     display: inline-block;
     vertical-align: top;
+    padding: 0 40rem / $fs;
     height: 45rem / $fs;
+    line-height: 45rem / $fs;
     border-radius: 45rem / $fs;
-    border: 2rem / $fs solid  #fff;
+    border: 3rem / $fs solid rgba(255, 255, 255, .5);
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 13em / $fs;
+    font-family: 'toyota_display';
+    transition: all .5s ease;
+
+    &:hover {
+        border-color: rgba(255, 255, 255, 1);
+    }
+
+    &[disabled="disabled"] {
+        opacity: .5;
+        cursor: default;
+        border-color: rgba(255, 255, 255, .5);
+    }
 }

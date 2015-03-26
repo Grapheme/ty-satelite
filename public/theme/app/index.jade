@@ -4,18 +4,19 @@ block content
   .wrapper
     .wrapper-in
       a(href="#").main-logo
-    //- .main-background.yes-background.js-background
-    //- .main-screen.js-main-screen
-    //-   div
-    //-     .yes-block.js-yes-block
-    //-       .block-background
-    //-       .answer-block
-    //-         a(href="#").js-answer-yes Да
-    //-     .no-block.js-no-block
-    //-       .block-background
-    //-       .answer-block
-    //-        a(href="#").js-answer-no Нет
-    .yes-screen.js-yes-screen.active
+    .main-background.yes-background.js-background.js-yes-back
+    .main-background.no-background.js-background.js-no-back
+    .main-screen.js-main-screen
+      div
+        .yes-block.js-yes-block.js-answer-yes
+          .block-background
+          .answer-block
+            a(href="#") Да
+        .no-block.js-no-block.js-answer-no
+          .block-background
+          .answer-block
+           a(href="#") Нет
+    .yes-screen.js-yes-screen
       .yes-screen-wrapper
         .wrapper-in
           .yes-top-text Ваша Camry, Ваша комплектация.
@@ -43,5 +44,18 @@ block content
                         span +
               each i in [0,1,2,3,4,5]
               .yes-screen__option.empty-option-after
-        .yes-footer
-          a(href="#").us-btn Посмотреть комплектацию
+        .yes-main-btn
+          a(href="complect.html").us-btn Посмотреть комплектацию
+    .no-screen.yes-screen.js-no-screen
+      .yes-screen-wrapper
+        .wrapper-in
+          .yes-top-text Что сделает ее лучше?
+        .yes-screen__list.js-yes-list
+          .list__cont.js-yes-cont
+        .yes-main-btn
+          a(href="ksps.html").us-btn.js-no-submit Проверить наличие
+    footer.footer
+      .wrapper-in
+        span &copy; Toyota
+        span.fl-r
+          a(href="//toyota.ru") Узнать больше о  преимуществах Toyota Сamry

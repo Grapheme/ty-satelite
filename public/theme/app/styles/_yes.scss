@@ -342,6 +342,40 @@
         }
     }
 
+    .yes-main-btn {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 155rem / $fs;
+        text-align: center;
+    }
+
+    &.no-screen {
+        background-image: url(../images/no/background.jpg);
+        background-size: 1920rem / $fs 1279rem / $fs;
+
+        .list__main-item {
+            display: none;
+        }
+        .list__other-item {
+            margin-top: 2rem / $fs !important;
+
+            .other-item__line {
+                background: #fff !important;
+            }
+
+            &.opened {
+                &:hover {
+                    height: 17rem / $fs !important;
+                }
+
+                .other-item__background {
+                    display: none;
+                } 
+            }
+        }
+    }
+
     &:before {
         content: "";
         position: absolute;
