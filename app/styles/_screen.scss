@@ -4,16 +4,41 @@
     left: 0;
     right: 0;
     bottom: 0;
+    min-width: 1305rem / $fs;
+    transform: translateZ(0);
+
     /* &:before {
         content: "";
         position: absolute;
+        left: 50%;
+        margin-left: -1rem / $fs;
+        width: 2rem / $fs;
         top: 0;
         bottom: 0;
-        width: 2px;
-        left: 50%;
-        margin-left: -1px;
-        background: #444;
+        background: #fff;
+        z-index: 999;
     } */
+
+    .wrapper-in {
+        position: relative;
+        width: 1275rem / $fs;
+        padding: 0 15rem / $fs;
+        margin: 0 auto;
+    }
+}
+
+.main-logo {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 90rem / $fs;
+    height: 153rem / $fs;
+    background-image: url(../images/logo.jpg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 100% 100%;
+    z-index: 100;
 }
 
 .main-background {
@@ -40,9 +65,9 @@
     z-index: 4;
 
     //
-    font-size: 35px;
+    font-size: 35rem / $fs;
     a {
-        margin: 0 20px;
+        margin: 0 20rem / $fs;
         color: #fff;
         text-decoration: none;
     }

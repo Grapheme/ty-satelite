@@ -3,14 +3,38 @@
     top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
+    min-height: 670px;
+    height: 100%;
     z-index: 2;
     opacity: 0;
     overflow: hidden;
     transition: all .5s ease;
+    background-color: #131220;
+    background-image: url(../images/yes/background.jpg);
+    background-position: top center;
+    background-size: 1920rem / $fs 1165rem / $fs;
+    background-repeat: no-repeat;
 
     &.active {
         opacity: 1;
+    }
+
+    .yes-screen-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        max-height: 1165px;
+    }
+
+    .yes-top-text {
+        font-family: 'toyota_display';
+        font-size: 56rem / $fs;
+        font-weight: 700;
+        color: #fff;
+        text-align: center;
+        margin-top: 95rem / $fs;
     }
 
     .yes-screen__list {
@@ -18,8 +42,8 @@
         position: absolute;
         left: 50%;
         bottom: 0;
-        width: 10000px;
-        margin-left: -5000px;
+        width: 10000rem / $fs;
+        margin-left: -5000rem / $fs;
         font-size: 0;
         text-align: center;
         white-space: nowrap;
@@ -35,10 +59,10 @@
             position: relative;
             display: inline-block;
             vertical-align: top;
-            margin: 0 5px;
-            font-size: 16px;
-            width: 150px;
-            height: 365px;
+            margin: 0 2.5rem / $fs;
+            font-size: 16rem / $fs;
+            width: 176rem / $fs;
+            height: 365rem / $fs;
             transition: all .5s ease;
 
             .yes-screen__cont {
@@ -53,53 +77,184 @@
                 transition: all .5s ease;
 
                 &.show {
-                    width: 160px;
+                    width: 181rem / $fs;
                 }
             }
         }
 
-        .list__nav {
-            height: 35px;
+        .list__option-name {
+            font-family: 'toyota_display';
+            font-size: 16rem / $fs;
+            color: #fff;
+            margin-top: 15rem / $fs;
+            height: 21rem / $fs;
             overflow: hidden;
             transition: all .5s ease;
-            font-size: 35px;
+        }
+
+        .list__nav {
+            height: 38rem / $fs;
+            overflow: hidden;
+            transition: all .5s ease;
+            font-size: 22rem / $fs;
+            font-family: 'toyota_display';
+            font-weight: 700;
+            margin-top: 15rem / $fs;
 
             a {
-                display: none;
-                color: #444;
+                position: relative;
+                display: inline-block;
+                width: 0;
+                height: 38rem / $fs;
                 text-decoration: none;
+                text-align: center;
+                margin: 0 3rem / $fs;
+                opacity: 0;
+                transition: all .5s ease;
+
+                span {
+                    display: inline-block;
+                    box-sizing: border-box;
+                    position: absolute;
+                    top: 0;
+                    width: 38rem / $fs;
+                    height: 38rem / $fs;
+                    line-height: 34rem / $fs;
+                    border-radius: 38rem / $fs;
+                    border: 2rem / $fs solid #fff;
+                    transition: all .5s ease;
+                }
+
+                &.nav__plus {
+                    span {
+                        color: #111113;
+                        background: #fff;
+                        left: 0;
+                        transform: rotate(45deg);
+                    }
+                }
+
+                &.nav__minus {
+                    span {
+                        color: #fff;
+                        background: transparent;
+                        right: 0;
+                        transform: rotate(-45deg);
+                    }
+                }
 
                 &.opened {
-                    display: inline-block;
-                } 
+                    width: 38rem / $fs;
+                    opacity: 1;
+
+                    span {
+                        transform: rotate(0deg);
+                    }
+                }
             }
         }
 
         .list__main-item {
+            position: relative;
             width: 100%;
-            height: 150px;
-            background: url(http://carclub.ru/news_pics/__camry_toyota__500_4a8d573268393.jpg);
+            height: 145rem / $fs;
             background-size: cover;
+            background-position: center center;
             transition: all .5s ease;
+            overflow: hidden;
+
+            .main-item__background {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-size: cover;
+                background-position: center center;
+                transition: opacity .5s ease;
+                opacity: 0;
+
+                &.active {
+                    opacity: 1;
+                }
+            }
         }
 
         .list__other-items {
             .list__other-item {
-                position: relative;
+                height: 0;
+                overflow: hidden;
+                transition: all .5s ease;
+
+                .other-item__content {
+                    height: 0;
+                    overflow: hidden;
+                    transition: height .5s ease;
+
+                    .other-item__background {
+                        position: relative;
+                        height: 150rem / $fs;
+                        background-size: cover;
+                        background-position: center center;
+
+                        .background__text {
+                            position: absolute;
+                            box-sizing: border-box;
+                            bottom: 0;
+                            left: 0;
+                            right: 0;
+                            color: #fff;
+                            font-size: 13rem / $fs;
+                            padding: 10rem / $fs;
+                            white-space: normal;
+                            text-align: left;
+                        }
+                    }
+                }
+
+                .other-item__line {
+                    height: 0;
+                    background-image: url(../images/yes/item_line.jpg);
+                    background-size: 100% 100%;
+                    background-position: center center;
+                    opacity: .33;
+                    transition: height .5s ease;
+                }
+
+                &.opened {
+                    height: 17rem / $fs;
+
+                    .other-item__line {
+                        height: 17rem / $fs;
+                    }
+
+                    &.active, &:hover {
+                        height: 167rem / $fs;
+
+                        .other-item__content {
+                            height: 150rem / $fs;
+                        }
+                    }
+                }
+                /* position: relative;
                 overflow: hidden;
                 height: 0;
                 transition: all .5s ease;
 
-                &.opened {
-                    height: 20px;
-
-                    &:hover {
-                        height: 150px;
-                    }
+                .other-item__line {
+                    height: 17rem / $fs;
+                    background-image: url(../images/yes/item_line.jpg);
+                    background-size: cover;
+                    background-position: center center;
+                    opacity: .33;
+                    transition: height .5s ease;
                 }
 
-                &.active {
-                    height: 150px;
+                .other-item__content {
+                    position: relative;
+                    height: 150rem / $fs;
+                    transition: all .5s ease;
+                    overflow: hidden;
                 }
 
                 .other-item__background {
@@ -107,11 +262,44 @@
                     top: 0;
                     left: 0;
                     right: 0;
-                    height: 150px;
-                    background: url('http://www.allcarz.ru/wp-content/uploads/2011/08/toyota-camry-2012-euro-06-650x487.jpg');
+                    height: 150rem / $fs;
                     background-size: cover;
                     background-position: center center;
+                    transition: all .5s ease;
+
+                    .background__text {
+                        position: absolute;
+                        box-sizing: border-box;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        color: #fff;
+                        font-size: 13rem / $fs;
+                        padding: 10rem / $fs;
+                        white-space: normal;
+                        text-align: left;
+                    }
                 }
+
+                &.opened {
+                    height: 17rem / $fs;
+
+                    .other-item__content {
+                        height: 0;
+                    }
+
+                    .other-item__line {
+                        height: 17rem / $fs;
+                    }
+
+                    &:hover, &.active {
+                        height: 167rem / $fs;
+
+                        .other-item__content {
+                            height: 150rem / $fs;
+                        }
+                    }
+                } */
             }
         }
     }
@@ -119,28 +307,74 @@
     &.opened {
         .list__nav {
             height: 0;
+            //opacity: 0;
         }
         .list__main-item {
             height: 0;
         }
         .yes-screen__option {
-            width: 600px;
+            width: 600rem / $fs;
+        }
+        .list__option-name {
+            //opacity: 0;
+            height: 0;
+            overflow: hidden;
         }
         .empty-option-before, .empty-option-after {
             &.show {
-                width: 610px !important;
+                width: 610rem / $fs !important;
             }
         }
         .list__other-items {
             .list__other-item {
                 &.opened {
-                    height: 360px !important;
+                    height: 360rem / $fs !important;
+
+                    .other-item__line {
+                        height: 0;
+                    }
 
                     .other-item__background {
-                        height: 360px;
+                        height: 360rem / $fs;
                     }
                 }
             }
         }
+    }
+
+    &:before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 0;
+        bottom: 0;
+        width: 100rem / $fs;
+        margin-left: -960rem / $fs;
+        z-index: -1;
+        background: -moz-linear-gradient(left,  rgba(19,18,32,1) 0%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(19,18,32,1)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(left,  rgba(19,18,32,1) 0%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(left,  rgba(19,18,32,1) 0%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(left,  rgba(19,18,32,1) 0%,rgba(0,0,0,0) 100%); /* IE10+ */
+        background: linear-gradient(to right,  rgba(19,18,32,1) 0%,rgba(0,0,0,0) 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#131220', endColorstr='#00000000',GradientType=1 ); /* IE6-9 */
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 0;
+        bottom: 0;
+        width: 100rem / $fs;
+        margin-left: 860rem / $fs;
+        z-index: -1;
+        background: -moz-linear-gradient(left,  rgba(0,0,0,0) 0%, rgba(19,18,32,1) 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(19,18,32,1))); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(left,  rgba(0,0,0,0) 0%,rgba(19,18,32,1) 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(left,  rgba(0,0,0,0) 0%,rgba(19,18,32,1) 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(left,  rgba(0,0,0,0) 0%,rgba(19,18,32,1) 100%); /* IE10+ */
+        background: linear-gradient(to right,  rgba(0,0,0,0) 0%,rgba(19,18,32,1) 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#131220',GradientType=1 ); /* IE6-9 */
     }
 }

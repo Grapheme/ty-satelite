@@ -2,32 +2,46 @@ extends layout
 
 block content
   .wrapper
-    .main-background.yes-background.js-background
-    .main-screen.js-main-screen
-      div
-        .yes-block.js-yes-block
-          .block-background
-          .answer-block
-            a(href="#").js-answer-yes Да
-        .no-block.js-no-block
-          .block-background
-          .answer-block
-           a(href="#").js-answer-no Нет
-    .yes-screen.js-yes-screen
-      .yes-screen__list.js-yes-list
-        .list__cont.js-yes-cont
-          each i in [0,1,2,3,4,5]
-            .yes-screen__option.empty-option-before
-          each i in [0,1,2,3,4,5,6]
-            .yes-screen__option.js-yes-option(data-id="#{i}")
-              .yes-screen__cont
-                .list__other-items
-                  each j in [5,4,3,2,1,0]
-                    .list__other-item.js-ksp(data-td="#{i}" data-tr="#{j}")
-                      .other-item__background
-                .list__main-item
-                .list__nav
-                  a(href="#").nav__plus.js-ksp-add +
-                  a(href="#").nav__minus.js-ksp-remove -
-          each i in [0,1,2,3,4,5]
-            .yes-screen__option.empty-option-after
+    .wrapper-in
+      a(href="#").main-logo
+    //- .main-background.yes-background.js-background
+    //- .main-screen.js-main-screen
+    //-   div
+    //-     .yes-block.js-yes-block
+    //-       .block-background
+    //-       .answer-block
+    //-         a(href="#").js-answer-yes Да
+    //-     .no-block.js-no-block
+    //-       .block-background
+    //-       .answer-block
+    //-        a(href="#").js-answer-no Нет
+    .yes-screen.js-yes-screen.active
+      .yes-screen-wrapper
+        .wrapper-in
+          .yes-top-text Ваша Camry, Ваша комплектация.
+        .yes-screen__list.js-yes-list
+          .list__cont.js-yes-cont
+            //- div
+              each i in [0,1,2,3,4,5]
+                .yes-screen__option.empty-option-before
+              each i in [0,1,2,3,4,5,6]
+                .yes-screen__option.js-yes-option(data-id="#{i}")
+                  .yes-screen__cont
+                    .list__other-items
+                      each j in [5,4,3,2,1,0]
+                        .list__other-item.js-ksp(data-td="#{i}" data-tr="#{j}")
+                          .other-item__line
+                          .other-item__content
+                            .other-item__background
+                              .background__text Новый двигатель 2.0 с 16-ступенчатой передаточкой АКППЖЖ
+                    .list__main-item
+                    .list__option-name Динамика
+                    .list__nav
+                      a(href="#").nav__minus.js-ksp-remove
+                        span -
+                      a(href="#").nav__plus.js-ksp-add
+                        span +
+              each i in [0,1,2,3,4,5]
+              .yes-screen__option.empty-option-after
+        .yes-footer
+          a(href="#").us-btn Посмотреть комплектацию

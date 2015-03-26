@@ -1,0 +1,11 @@
+html {
+    font-family: 'toyota_text';
+    font-weight: 400;
+    font-size: #{$fs}px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+    backface-visibility: hidden;
+}
