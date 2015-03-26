@@ -67,7 +67,7 @@ class Dic extends BaseModel {
         return $this->hasMany('DicVal', 'dic_id', 'id')
             ->select($tbl_dicval.'.*')
             ->where('version_of', NULL)
-            ->with('meta', 'fields', 'textfields', 'seo', 'related_dicvals')
+            #->with('meta', 'fields', 'textfields', 'seo', 'related_dicvals')
             ;
     }
 
