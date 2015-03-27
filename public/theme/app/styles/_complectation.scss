@@ -1,0 +1,156 @@
+.complectation {
+    background-size: 1920rem / $fs auto;
+    background-position: center top;
+    font-family: 'toyota_display';
+    color: #fff;
+    padding-bottom: 4.0625rem;
+
+    .complect-title {
+        font-size: 50em / $fs;
+        font-weight: 700;
+        line-height: 1;
+        margin: 45rem / $fs 0 35rem / $fs;
+    }
+
+    .complect__title {
+        position: relative;
+        line-height: 1;
+        margin-top: 65rem / $fs;
+
+        .title__main {
+            font-size: 105em / $fs;
+            font-weight: 700;
+        }
+
+        .title__desc {
+            position: absolute;
+            font-size: 20em / $fs;
+            left: 5.1rem;
+        }
+    }
+
+    .complect__price {
+        margin-top: 50rem / $fs;
+        font-size: 30em / $fs;
+        font-weight: 700;
+    }
+
+    .complect__btns {
+        margin-top: 55rem / $fs;
+
+        .btns__cont {
+            margin-bottom: 10rem / $fs;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            .us-btn {
+                width: 195rem / $fs;
+                text-align: center;
+            }
+        }
+    }
+
+    .complect__info {
+        margin-top: 365rem / $fs;
+
+        .info__soc {
+            .soc__title {
+                display: inline-block;
+                vertical-align: middle;
+                width: 90rem / $fs;
+                font-size: 13em / $fs;
+                text-transform: uppercase;
+            }
+
+            .soc__btns {
+                margin-left: 15rem / $fs;
+                display: inline-block;
+                vertical-align: middle;
+
+                a {
+                    display: inline-block;
+                    vertical-align: middle;
+                    width: 33rem / $fs;
+                    height: 33rem / $fs;
+                    line-height: 33rem / $fs;
+                    border-radius: 39rem / $fs;
+                    border: 3rem / $fs solid;
+                    margin-right: 8rem / $fs;
+                    color: inherit;
+                    text-decoration: none;
+                    text-align: center;
+                    font-size: 1.2em;
+
+                    &:before {
+                        @extend .fa;
+                    }
+
+                    &.btns__vk:before {
+                        content: "\f189";
+                    }
+
+                    &.btns__fb:before {
+                        content: "\f09a";
+                    }
+                }
+            }
+        }
+
+        .info__options {
+            .js-carousel {
+                overflow: hidden;
+                width: 1080rem / $fs;
+            }
+
+            .options__list {
+                position: relative;
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                font-size: 0;
+                overflow: hidden;
+                width: 2000px;
+
+                li {
+                    position: relative;
+                    float: left;
+                    box-sizing: border-box;
+                    width: 175rem / $fs;
+                    height: 145rem / $fs;
+                    background-size: cover;
+                    background-position: center center;
+                    font-size: 13rem / $fs;
+                    margin: 0 2.5rem / $fs;
+
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        box-sizing: border-box;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        border: 5px solid #fff;
+                        opacity: 0;
+                        transition: all .5s ease;
+                    }
+
+                    &:hover {
+                        &:before {
+                            opacity: 1;
+                        }
+                    }
+
+                    .list__text {
+                        position: absolute;
+                        left: 20rem / $fs;
+                        bottom: 20rem / $fs;
+                        right: 20rem / $fs;
+                    }
+                }
+            }
+        }
+    }
+}

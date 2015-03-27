@@ -5,144 +5,182 @@ Dictionary.KSP = [
     {
         id: 500,
         name: "Динамика",
-        image: "images/tmp/ksp1.jpg",
+        image: "./images/tmp/ksp1.jpg",
         ksp: [
             {
                 id: 1,
                 preview: "Новый двигатель 2.0 L с 6-ступенчатой АКПП",
-                image: "images/tmp/ksp2.jpg"
+                image: "./images/tmp/ksp2.jpg",
+                title: "Телефонные звонки",
+                desc: "Теперь вы сможете совершать телефонные звонки, читать, создавать и отправлять сообщения, набираяя текст прямо на сенсорном экране. Через MirrorLink вы сможете слушать любимую музыку через аудиосистему автомобиля."
             },
             {
                 id: 2,
                 preview: "Новый двигатель 2.0 L с 6-ступенчатой АКПП",
-                image: "images/tmp/ksp3.jpg"
+                image: "./images/tmp/ksp3.jpg",
+                title: "Телефонные звонки",
+                desc: "Теперь вы сможете совершать телефонные звонки, читать, создавать и отправлять сообщения, набираяя текст прямо на сенсорном экране. Через MirrorLink вы сможете слушать любимую музыку через аудиосистему автомобиля."
             },
             {
                 id: 3,
                 preview: "Новый двигатель 2.0 L с 6-ступенчатой АКПП",
-                image: "images/tmp/ksp4.jpg"
+                image: "./images/tmp/ksp4.jpg",
+                title: "Телефонные звонки",
+                desc: "Теперь вы сможете совершать телефонные звонки, читать, создавать и отправлять сообщения, набираяя текст прямо на сенсорном экране. Через MirrorLink вы сможете слушать любимую музыку через аудиосистему автомобиля."
             },
             {
                 id: 4,
                 preview: "Новый двигатель 2.0 L с 6-ступенчатой АКПП",
-                image: "images/tmp/ksp1.jpg"
+                image: "./images/tmp/ksp1.jpg",
+                title: "Телефонные звонки",
+                desc: "Теперь вы сможете совершать телефонные звонки, читать, создавать и отправлять сообщения, набираяя текст прямо на сенсорном экране. Через MirrorLink вы сможете слушать любимую музыку через аудиосистему автомобиля."
             },
         ]
     },
     {
         id: 2,
         name: "Дизайн",
-        image: "images/tmp/ksp2.jpg",
+        image: "./images/tmp/ksp2.jpg",
         ksp: [
             {
                 id: 1,
                 preview: "Новый двигатель 2.0 L с 6-ступенчатой АКПП",
-                image: "images/tmp/ksp3.jpg"
+                image: "./images/tmp/ksp3.jpg",
+                title: "Телефонные звонки",
+                desc: "Теперь вы сможете совершать телефонные звонки, читать, создавать и отправлять сообщения, набираяя текст прямо на сенсорном экране. Через MirrorLink вы сможете слушать любимую музыку через аудиосистему автомобиля."
             },
             {
                 id: 2,
                 preview: "Новый двигатель 2.0 L с 6-ступенчатой АКПП",
-                image: "images/tmp/ksp4.jpg"
+                image: "./images/tmp/ksp4.jpg",
+                title: "Телефонные звонки",
+                desc: "Теперь вы сможете совершать телефонные звонки, читать, создавать и отправлять сообщения, набираяя текст прямо на сенсорном экране. Через MirrorLink вы сможете слушать любимую музыку через аудиосистему автомобиля."
             }
         ]
     },
     {
         id: 3,
         name: "Иновации",
-        image: "images/tmp/ksp3.jpg",
+        image: "./images/tmp/ksp3.jpg",
         ksp: [
             {
                 id: 1,
                 preview: "Новый двигатель 2.0 L с 6-ступенчатой АКПП",
-                image: "images/tmp/ksp1.jpg"
+                image: "./images/tmp/ksp1.jpg",
+                title: "Телефонные звонки",
+                desc: "Теперь вы сможете совершать телефонные звонки, читать, создавать и отправлять сообщения, набираяя текст прямо на сенсорном экране. Через MirrorLink вы сможете слушать любимую музыку через аудиосистему автомобиля."
             },
             {
                 id: 2,
                 preview: "Новый двигатель 2.0 L с 6-ступенчатой АКПП",
-                image: "images/tmp/ksp2.jpg"
+                image: "./images/tmp/ksp2.jpg",
+                title: "Телефонные звонки",
+                desc: "Теперь вы сможете совершать телефонные звонки, читать, создавать и отправлять сообщения, набираяя текст прямо на сенсорном экране. Через MirrorLink вы сможете слушать любимую музыку через аудиосистему автомобиля."
             },
             {
                 id: 3,
                 preview: "Новый двигатель 2.0 L с 6-ступенчатой АКПП",
-                image: "images/tmp/ksp3.jpg"
+                image: "./images/tmp/ksp3.jpg",
+                title: "Телефонные звонки",
+                desc: "Теперь вы сможете совершать телефонные звонки, читать, создавать и отправлять сообщения, набираяя текст прямо на сенсорном экране. Через MirrorLink вы сможете слушать любимую музыку через аудиосистему автомобиля."
             }
         ]
     },
     {
         id: 4,
         name: "Комфорт",
-        image: "images/tmp/ksp4.jpg",
+        image: "./images/tmp/ksp4.jpg",
         ksp: [
             {
                 id: 1,
                 preview: "Новый двигатель 2.0 L с 6-ступенчатой АКПП",
-                image: "images/tmp/ksp4.jpg"
+                image: "./images/tmp/ksp4.jpg",
+                title: "Телефонные звонки",
+                desc: "Теперь вы сможете совершать телефонные звонки, читать, создавать и отправлять сообщения, набираяя текст прямо на сенсорном экране. Через MirrorLink вы сможете слушать любимую музыку через аудиосистему автомобиля."
             },
             {
                 id: 2,
                 preview: "Новый двигатель 2.0 L с 6-ступенчатой АКПП",
-                image: "images/tmp/ksp1.jpg"
+                image: "./images/tmp/ksp1.jpg",
+                title: "Телефонные звонки",
+                desc: "Теперь вы сможете совершать телефонные звонки, читать, создавать и отправлять сообщения, набираяя текст прямо на сенсорном экране. Через MirrorLink вы сможете слушать любимую музыку через аудиосистему автомобиля."
             }
         ]
     },
     {
         id: 5,
         name: "Экономичность",
-        image: "images/tmp/ksp1.jpg",
+        image: "./images/tmp/ksp1.jpg",
         ksp: [
             {
                 id: 1,
                 preview: "Новый двигатель 2.0 L с 6-ступенчатой АКПП",
-                image: "images/tmp/ksp2.jpg"
+                image: "./images/tmp/ksp2.jpg",
+                title: "Телефонные звонки",
+                desc: "Теперь вы сможете совершать телефонные звонки, читать, создавать и отправлять сообщения, набираяя текст прямо на сенсорном экране. Через MirrorLink вы сможете слушать любимую музыку через аудиосистему автомобиля."
             },
             {
                 id: 2,
                 preview: "Новый двигатель 2.0 L с 6-ступенчатой АКПП",
-                image: "images/tmp/ksp3.jpg"
+                image: "./images/tmp/ksp3.jpg",
+                title: "Телефонные звонки",
+                desc: "Теперь вы сможете совершать телефонные звонки, читать, создавать и отправлять сообщения, набираяя текст прямо на сенсорном экране. Через MirrorLink вы сможете слушать любимую музыку через аудиосистему автомобиля."
             },
             {
                 id: 3,
                 preview: "Новый двигатель 2.0 L с 6-ступенчатой АКПП",
-                image: "images/tmp/ksp4.jpg"
+                image: "./images/tmp/ksp4.jpg",
+                title: "Телефонные звонки",
+                desc: "Теперь вы сможете совершать телефонные звонки, читать, создавать и отправлять сообщения, набираяя текст прямо на сенсорном экране. Через MirrorLink вы сможете слушать любимую музыку через аудиосистему автомобиля."
             }
         ]
     },
     {
         id: 6,
         name: "Безопасность",
-        image: "images/tmp/ksp2.jpg",
+        image: "./images/tmp/ksp2.jpg",
         ksp: [
             {
                 id: 1,
                 preview: "Новый двигатель 2.0 L с 6-ступенчатой АКПП",
-                image: "images/tmp/ksp1.jpg"
+                image: "./images/tmp/ksp1.jpg",
+                title: "Телефонные звонки",
+                desc: "Теперь вы сможете совершать телефонные звонки, читать, создавать и отправлять сообщения, набираяя текст прямо на сенсорном экране. Через MirrorLink вы сможете слушать любимую музыку через аудиосистему автомобиля."
             },
             {
                 id: 2,
                 preview: "Новый двигатель 2.0 L с 6-ступенчатой АКПП",
-                image: "images/tmp/ksp2.jpg"
+                image: "./images/tmp/ksp2.jpg",
+                title: "Телефонные звонки",
+                desc: "Теперь вы сможете совершать телефонные звонки, читать, создавать и отправлять сообщения, набираяя текст прямо на сенсорном экране. Через MirrorLink вы сможете слушать любимую музыку через аудиосистему автомобиля."
             }
         ]
     },
     {
         id: 7,
         name: "Функциональность",
-        image: "images/tmp/ksp3.jpg",
+        image: "./images/tmp/ksp3.jpg",
         ksp: [
             {
                 id: 1,
                 preview: "Новый двигатель 2.0 L с 6-ступенчатой АКПП",
-                image: "images/tmp/ksp3.jpg"
+                image: "./images/tmp/ksp3.jpg",
+                title: "Телефонные звонки",
+                desc: "Теперь вы сможете совершать телефонные звонки, читать, создавать и отправлять сообщения, набираяя текст прямо на сенсорном экране. Через MirrorLink вы сможете слушать любимую музыку через аудиосистему автомобиля."
             },
             {
                 id: 2,
                 preview: "Новый двигатель 2.0 L с 6-ступенчатой АКПП",
-                image: "images/tmp/ksp4.jpg"
+                image: "./images/tmp/ksp4.jpg",
+                title: "Телефонные звонки",
+                desc: "Теперь вы сможете совершать телефонные звонки, читать, создавать и отправлять сообщения, набираяя текст прямо на сенсорном экране. Через MirrorLink вы сможете слушать любимую музыку через аудиосистему автомобиля."
             },
             {
                 id: 3,
                 preview: "Новый двигатель 2.0 L с 6-ступенчатой АКПП",
-                image: "images/tmp/ksp1.jpg"
+                image: "./images/tmp/ksp1.jpg",
+                title: "Телефонные звонки",
+                desc: "Теперь вы сможете совершать телефонные звонки, читать, создавать и отправлять сообщения, набираяя текст прямо на сенсорном экране. Через MirrorLink вы сможете слушать любимую музыку через аудиосистему автомобиля."
             }
         ]
     }
@@ -228,10 +266,9 @@ Camry.answer = function() {
         block_no = $('.js-no-block');
         back_yes = $('.js-yes-back');
         back_no = $('.js-no-back');
-    var showYes = function() {
+    /*var showYes = function() {
         block_yes.addClass('active');
         $('.js-yes-screen').show();
-        back_no.hide();
         block_no.addClass('hide');
         setTimeout(function(){
             $('.js-background').fadeOut();
@@ -242,21 +279,19 @@ Camry.answer = function() {
     var showNo = function() {
         block_no.addClass('active');
         $('.js-no-screen').show();
-        back_yes.hide();
         block_yes.addClass('hide');
         setTimeout(function(){
             $('.js-background').fadeOut();
             $('.js-main-screen').fadeOut();
             $('.js-no-screen').addClass('active');
         }, 1000);
-    }
+    }*/
     var init = function() {
-        $('.js-yes-screen, .js-no-screen').hide();
         link_yes.on('click', function(){
-            showYes();
+            window.location.href = "yes.html";
         });
         link_no.on('click', function(){
-            showNo();
+            window.location.href = "no.html";
         });
     }
     init();
@@ -289,6 +324,13 @@ Camry.yesScreen = function() {
             $.each(value.ksp, function(ksp_index, ksp_value){
                 options_str += '\
                     <div data-td="' + dataid + '" data-tr="' + ksp_step + '" class="list__other-item js-ksp" data-option-id="' + value.id + '" data-ksp-id="' + ksp_value.id + '">\
+                        <div class="other-item__opened">\
+                            <div class="opened__top-title">' + value.name + '</div>\
+                            <div class="opened__bottom">\
+                                <div class="opened__title">' + ksp_value.title + '</div>\
+                                <div class="opened__desc">' + ksp_value.desc + '</div>\
+                            </div>\
+                        </div>\
                       <div class="other-item__content">\
                         <div class="other-item__background" style="background-image: url(' + ksp_value.image + ');">\
                           <div class="background__text">' + ksp_value.preview + '</div>\
@@ -393,6 +435,12 @@ Camry.yesScreen = function() {
         });
         setNav();
     }
+    this.close = function() {
+        self.start();
+        $('.yes-overlay').removeClass('active');
+        $('.js-yes-screen .empty-option-before, .empty-option-after').removeClass('show');
+        parent.removeClass('opened');
+    }
     this.open = function(tr_id, td_id) {
         var time1 = 0;
         var time2 = 0;
@@ -412,20 +460,34 @@ Camry.yesScreen = function() {
                 $('.js-yes-screen .empty-option-after').eq(i).addClass('show');
         }
         setTimeout(function(){
-            var new_bottom = -(wrapper.height() - (osizes.height)) / 2 + tr_id * osizes.height;
+            var cof = 25;
+            var new_bottom = - wrapper.height() + wrapper.height()/2 + osizes.height/2 + cof/* - osizes.height/2 + cof*/;
             parent.addClass('opened');
+            $('.yes-overlay').addClass('active');
             setTimeout(function(){
                 yesCont.attr('style', Help.Transform('translateY(' + new_bottom + 'px)'));
             }, time2);
         }, time1);
-        /*var ksp_block = $('.js-ksp[data-tr="' + tr_id + '"][data-td="' + td_id + '"]');
-        var option_index = ksp_block.parents('.js-yes-option').index();*/
+        var ksp_block = $('.js-ksp[data-tr="' + tr_id + '"][data-td="' + td_id + '"]');
+        var option_index = ksp_block.parents('.js-yes-option').index();
+        $('.js-ksp').removeClass('active-ksp');
+        ksp_block.addClass('active-ksp');
     }
     this.setEvents = function() {
         $(document).on('click', '.js-ksp', function() {
             self.open($(this).attr('data-tr'), $(this).attr('data-td'));
             return false;
-        })
+        });
+        $(document).on('click', '.yes-overlay', function() {
+            self.close();
+            return false;
+        });
+        $(document).on('click', '.js-yes-list', function(e){
+            if($(e.target).hasClass('js-yes-list')) {
+                self.close();
+            }
+            return false;
+        });
     }
     this.init = function() {
         self.setHtml();
@@ -448,7 +510,7 @@ Camry.noScreen = function() {
             width: 181
         };
     var osizes = {
-            height: 360,
+            height: 545,
             width: 610
         };
     this.setHtml = function() {
@@ -550,9 +612,44 @@ Camry.noScreen = function() {
     }
     self.init();
 }
+Camry.Carousel = function() {
+    $('.js-carousel').jcarousel();
+    $('.js-carousel-prev')
+        .on('jcarouselcontrol:active', function() {
+            $(this).removeClass('inactive');
+        })
+        .on('jcarouselcontrol:inactive', function() {
+            $(this).addClass('inactive');
+        })
+        .jcarouselControl({
+            // Options go here
+            target: '-=1'
+        });
+
+    /*
+     Next control initialization
+     */
+    $('.js-carousel-next')
+        .on('jcarouselcontrol:active', function() {
+            $(this).removeClass('inactive');
+        })
+        .on('jcarouselcontrol:inactive', function() {
+            $(this).addClass('inactive');
+        })
+        .jcarouselControl({
+            // Options go here
+            target: '+=1'
+        });
+
+}
 
 $(function(){
+    Camry.Carousel();
     Camry.answer();
     Camry.yesScreen();
     Camry.noScreen();
+    $('.yes-overlay').blurjs({
+        source: '.js-yes-screen',
+        radius: 175
+    });
 });

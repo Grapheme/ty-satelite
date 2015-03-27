@@ -1,8 +1,10 @@
 // bower:scss
 @import "bower_components/normalize-scss/_normalize.scss";
+@import "bower_components/components-font-awesome/scss/font-awesome.scss";
 // endbower
 
 $fs: 16;
+$defaultEasing: cubic-bezier(0.135, 0.780, 0.465, 0.995);
 
 @import "fonts";
 @import "app";
@@ -10,5 +12,6 @@ $fs: 16;
 
 @import "screen";
 @import "yes";
+@import "complectation";
 
 @import "media";

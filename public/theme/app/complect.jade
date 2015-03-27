@@ -1,8 +1,45 @@
 extends layout
 
 block content
-  .wrapper
-    .wrapper-in(style="text-align: center; margin-top: 100px; font-size: 50px; font-family: 'toyota_display'; font-weight: 700;") Ваша комплектация
-    a(href="http://toyota.ru" style="margin-left:100px; font-size: 15px; font-family: 'toyota_display'; font-weight: 700;") Записаться на тест-драйв
-    a(href="http://toyota.ru" style="margin-left:100px; font-size: 15px; font-family: 'toyota_display'; font-weight: 700;") Перейти в конфигуратор
-    a(href="./" style="margin-left:100px; font-size: 15px; font-family: 'toyota_display'; font-weight: 700;") Вернуться к выбору
+    .wrapper.complectation(style="background-image: url(images/complectations/background-dark.jpg)")
+        .wrapper-in
+            .complect__title
+                span.title__main Люкс
+                span.title__desc Для Вас подобрана комплектация
+            .complect__price от 1 878 000 руб.
+            .complect__btns
+                .btns__cont
+                    a(href="#").us-btn Записаться на тест-драйв
+                .btns__cont
+                    a(href="#").us-btn Перейти в конфигуратор
+                .btns__cont
+                    a(href="#").us-btn Вернуться к выбору
+            .complect__info
+                .info__soc
+                    .soc__title Поделиться в соц.сетях
+                    .soc__btns
+                        a(href="#").btns__vk
+                        a(href="#").btns__fb
+                .info__options
+                    .complect-title Опции
+                    .option__slider
+                        a(href="#").js-carousel-next next
+                        a(href="#").js-carousel-prev PREV
+                        .js-carousel
+                            ul.options__list
+                                each i in [1,2,3]
+                                    each i in [1,2,3,4,5]
+                                        li(style="background-image: url(images/tmp/option_#{i}.jpg);")
+                                            .list__text Цветной дисплей
+                .info__tech
+                    .complect-title Опции
+                    ul.tech__list
+                        li
+                            .list__title Тип двигателя / тип топлива
+                            .list__desc (л. с.) кВт / об/мин
+                            .list__text DOHC, 24-клапанный Dual VVT-i, 6, V-образный / бензин
+                .info__footer
+                    .footer__btn
+                        a(href="#").us-btn Все технические характеристики
+                    .footer__desc Представленная комплектация может отличаться от реальной.
+        include footer

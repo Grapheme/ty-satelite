@@ -1,0 +1,50 @@
+extends layout
+
+block content
+  .wrapper
+    .wrapper-in
+      a(href="#").main-logo
+    //- .main-background.yes-background.js-background.js-yes-back
+    //- .main-background.no-background.js-background.js-no-back
+    //- .main-screen.js-main-screen
+    //-   div
+    //-     .yes-block.js-yes-block.js-answer-yes
+    //-       .block-background
+    //-       .answer-block
+    //-         a(href="#") Да
+    //-     .no-block.js-no-block.js-answer-no
+    //-       .block-background
+    //-       .answer-block
+    //-        a(href="#") Нет
+    .yes-screen.js-yes-screen
+      .yes-screen-wrapper
+        .wrapper-in
+          .yes-top-text Ваша Camry, Ваша комплектация.
+        .yes-overlay
+        .yes-screen__list.js-yes-list
+          .list__cont.js-yes-cont
+            //- div
+              each i in [0,1,2,3,4,5]
+                .yes-screen__option.empty-option-before
+              each i in [0,1,2,3,4,5,6]
+                .yes-screen__option.js-yes-option(data-id="#{i}")
+                  .yes-screen__cont
+                    .list__other-items
+                      each j in [5,4,3,2,1,0]
+                        .list__other-item.js-ksp(data-td="#{i}" data-tr="#{j}")
+                          .other-item__line
+                          .other-item__content
+                            .other-item__background
+                              .background__text Новый двигатель 2.0 с 16-ступенчатой передаточкой АКППЖЖ
+                    .list__main-item
+                    .list__option-name Динамика
+                    .list__nav
+                      a(href="#").nav__minus.js-ksp-remove
+                        span -
+                      a(href="#").nav__plus.js-ksp-add
+                        span +
+              each i in [0,1,2,3,4,5]
+              .yes-screen__option.empty-option-after
+        .yes-main-btn
+          a(href="complect.html").us-btn Посмотреть комплектацию
+        include footer

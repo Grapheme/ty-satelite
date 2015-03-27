@@ -6,18 +6,13 @@
     min-height: 670px;
     height: 100%;
     z-index: 2;
-    opacity: 0;
     overflow: hidden;
-    transition: all .5s ease;
+    transition: all .75s $defaultEasing;
     background-color: #131220;
     background-image: url(../images/yes/background.jpg);
     background-position: top center;
     background-size: 1920rem / $fs 1165rem / $fs;
     background-repeat: no-repeat;
-
-    &.active {
-        opacity: 1;
-    }
 
     .yes-screen-wrapper {
         position: absolute;
@@ -37,9 +32,26 @@
         margin-top: 95rem / $fs;
     }
 
+    .yes-overlay {
+        position: absolute;
+        z-index: 4;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-size: cover !important;
+        opacity: 0;
+        transition: opacity .75s $defaultEasing;
+
+        &.active {
+            opacity: 1;
+        }
+    }
+
     .yes-screen__list {
         display: inline-block;
         position: absolute;
+        z-index: 5;
         left: 50%;
         bottom: 0;
         width: 10000rem / $fs;
@@ -47,12 +59,12 @@
         font-size: 0;
         text-align: center;
         white-space: nowrap;
-        transition: all .5s ease;
+        transition: all .75s $defaultEasing;
 
         .list__cont {
             display: inline-block;
             vertical-align: top;
-            transition: all .5s ease;
+            transition: all .75s $defaultEasing;
         }
 
         .yes-screen__option {
@@ -63,7 +75,7 @@
             font-size: 16rem / $fs;
             width: 176rem / $fs;
             height: 365rem / $fs;
-            transition: all .5s ease;
+            transition: all .75s $defaultEasing;
 
             .yes-screen__cont {
                 position: absolute;
@@ -74,7 +86,7 @@
 
             &.empty-option-before, &.empty-option-after {
                 width: 0;
-                transition: all .5s ease;
+                transition: all .75s $defaultEasing;
 
                 &.show {
                     width: 181rem / $fs;
@@ -89,13 +101,13 @@
             margin-top: 15rem / $fs;
             height: 21rem / $fs;
             overflow: hidden;
-            transition: all .5s ease;
+            transition: all .75s $defaultEasing;
         }
 
         .list__nav {
             height: 38rem / $fs;
             overflow: hidden;
-            transition: all .5s ease;
+            transition: all .75s $defaultEasing;
             font-size: 22rem / $fs;
             font-family: 'toyota_display';
             font-weight: 700;
@@ -110,7 +122,7 @@
                 text-align: center;
                 margin: 0 3rem / $fs;
                 opacity: 0;
-                transition: all .5s ease;
+                transition: all .75s $defaultEasing;
 
                 span {
                     display: inline-block;
@@ -122,7 +134,7 @@
                     line-height: 34rem / $fs;
                     border-radius: 38rem / $fs;
                     border: 2rem / $fs solid #fff;
-                    transition: all .5s ease;
+                    transition: all .75s $defaultEasing;
                 }
 
                 &.nav__plus {
@@ -160,7 +172,7 @@
             height: 145rem / $fs;
             background-size: cover;
             background-position: center center;
-            transition: all .5s ease;
+            transition: all .75s $defaultEasing;
             overflow: hidden;
 
             .main-item__background {
@@ -171,7 +183,7 @@
                 bottom: 0;
                 background-size: cover;
                 background-position: center center;
-                transition: opacity .5s ease;
+                transition: opacity .75s $defaultEasing;
                 opacity: 0;
 
                 &.active {
@@ -182,20 +194,22 @@
 
         .list__other-items {
             .list__other-item {
+                position: relative;
                 height: 0;
                 overflow: hidden;
-                transition: all .5s ease;
+                transition: all .75s $defaultEasing;
 
                 .other-item__content {
                     height: 0;
                     overflow: hidden;
-                    transition: height .5s ease;
+                    transition: height .75s $defaultEasing;
 
                     .other-item__background {
                         position: relative;
                         height: 150rem / $fs;
                         background-size: cover;
                         background-position: center center;
+                        transition: all .75s $defaultEasing;
 
                         .background__text {
                             position: absolute;
@@ -218,7 +232,7 @@
                     background-size: 100% 100%;
                     background-position: center center;
                     opacity: .33;
-                    transition: height .5s ease;
+                    transition: height .75s $defaultEasing;
                 }
 
                 &.opened {
@@ -239,7 +253,7 @@
                 /* position: relative;
                 overflow: hidden;
                 height: 0;
-                transition: all .5s ease;
+                transition: all .75s $defaultEasing;
 
                 .other-item__line {
                     height: 17rem / $fs;
@@ -247,13 +261,13 @@
                     background-size: cover;
                     background-position: center center;
                     opacity: .33;
-                    transition: height .5s ease;
+                    transition: height .75s $defaultEasing;
                 }
 
                 .other-item__content {
                     position: relative;
                     height: 150rem / $fs;
-                    transition: all .5s ease;
+                    transition: all .75s $defaultEasing;
                     overflow: hidden;
                 }
 
@@ -265,7 +279,7 @@
                     height: 150rem / $fs;
                     background-size: cover;
                     background-position: center center;
-                    transition: all .5s ease;
+                    transition: all .75s $defaultEasing;
 
                     .background__text {
                         position: absolute;
@@ -300,6 +314,50 @@
                         }
                     }
                 } */
+
+                .other-item__opened {
+                    position: absolute;
+                    z-index: 1;
+                    box-sizing: border-box;
+                    top: 0;
+                    left: 0;
+                    white-space: normal;
+                    text-align: left;
+                    width: 695rem / $fs;
+                    height: 545rem / $fs;
+                    color: #fff;
+                    padding: 0 30px 25px 30px;
+                    border: 9px solid transparent;
+                    background: rgba(24, 30, 43, 0.5);
+                    font-family: 'toyota_display';
+                    transition: all .75s $defaultEasing;
+                    opacity: 0;
+
+                    .opened__top-title {
+                        font-size: 50px;
+                        font-weight: 700;
+                    }
+
+                    .opened__bottom {
+                        position: absolute;
+                        bottom: 25px;
+                        left: 30px;
+                        right: 30px;
+                        opacity: 0;
+                        transition: opacity .75s $defaultEasing;
+
+                        .opened__title {
+                            font-size: 30px;
+                            font-weight: 700;
+                        }
+
+                        .opened__desc{
+                            font-size: 13px;
+                            font-weight: 400;
+                            margin-top: 10px;
+                        }
+                    }
+                }
             }
         }
     }
@@ -309,11 +367,14 @@
             height: 0;
             //opacity: 0;
         }
+        .background__text {
+            display: none;
+        }
         .list__main-item {
             height: 0;
         }
         .yes-screen__option {
-            width: 600rem / $fs;
+            width: 695rem / $fs;
         }
         .list__option-name {
             //opacity: 0;
@@ -322,20 +383,44 @@
         }
         .empty-option-before, .empty-option-after {
             &.show {
-                width: 610rem / $fs !important;
+                width: 705rem / $fs !important;
             }
         }
         .list__other-items {
             .list__other-item {
                 &.opened {
-                    height: 360rem / $fs !important;
+                    height: 545rem / $fs !important;
+
+                    .other-item__opened {
+                        opacity: 1;
+                    }
 
                     .other-item__line {
                         height: 0;
                     }
 
                     .other-item__background {
-                        height: 360rem / $fs;
+                        height: 545rem / $fs;
+                    }
+
+                    .other-item__content {
+                        height: 100%;
+                    }
+
+                    &:hover {
+                        .other-item__content {
+                            height: 100%;
+                        }
+                    }
+
+                    &.active-ksp {
+                        .other-item__opened {
+                            border-color: #fff;
+
+                            .opened__bottom {
+                                opacity: 1;
+                            }
+                        }
                     }
                 }
             }
