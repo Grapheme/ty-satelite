@@ -7,7 +7,7 @@
     "normalize-scss": "~3.0.2",
     "blurjs": "~0.2.0",
     "components-font-awesome": "~4.3.0",
-    "owlcarousel": "~1.3.2",
-    "jcarousel": "~0.3.3"
+    "jcarousel": "~0.3.3",
+    "parallax": "~2.1.3"
   }
 }

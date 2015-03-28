@@ -50,11 +50,11 @@ gulp.task('html', ['views', 'styles'], function () {
     .pipe(gulp.dest('dist'));
 });
 
-// var cache = require('gulp-cache');
-// gulp.task('clearCache', function() {
-//   // Or, just call this for everything
-//   cache.clearAll();
-// });
+var cache = require('gulp-cache');
+gulp.task('clearCache', function() {
+  // Or, just call this for everything
+  cache.clearAll();
+});
 
 gulp.task('images', function () {
   return gulp.src('app/images/**/*')

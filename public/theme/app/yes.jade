@@ -17,7 +17,17 @@ block content
     //-       .answer-block
     //-        a(href="#") Нет
     .yes-screen.js-yes-screen
+      .yes-screen-back#parallax-scene
+        .layer.main-layer(data-depth="0.1")
+        .layer.other-layer1(data-depth="0.2")
+        .layer.other-layer2(data-depth="0.4")
       .yes-screen-wrapper
+        .yes-navigation
+          a(href="#").nav__right
+          a(href="#").nav__left
+          a(href="#").nav__top
+          a(href="#").nav__bottom
+        .ksp-opened-sample
         .wrapper-in
           .yes-top-text Ваша Camry, Ваша комплектация.
         .yes-overlay
@@ -47,4 +57,4 @@ block content
               .yes-screen__option.empty-option-after
         .yes-main-btn
           a(href="complect.html").us-btn Посмотреть комплектацию
-        include footer
+      include footer

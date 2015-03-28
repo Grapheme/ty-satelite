@@ -302,7 +302,9 @@ Camry.yesScreen = function() {
         yesCont = parent.find('.js-yes-cont'),
         yesBlock = parent.find('.js-yes-list'),
         wrapper = $('.wrapper'),
-        opened = false;
+        opened = false,
+        active_tr,
+        active_td;
     var csizes = {
             height: 0,
             width: 181
@@ -380,7 +382,7 @@ Camry.yesScreen = function() {
                 if(value.id == option_id) {
                     $.each(value.ksp, function(index, value){
                         if(value.id == ksp_id) {
-                            console.log(value);
+                            //console.log(value);
                             background_new = value.image;
                         }
                     });
@@ -406,8 +408,14 @@ Camry.yesScreen = function() {
             }, 500);
             setNav(this_block);
         }
+        var emptyOption = function(option) {
+            option.find('.js-ksp-remove').removeClass('opened');
+            option.addClass('empty-option');
+        }
         var setNav = function(this_block) {
             $('.js-yes-screen .js-yes-option').each(function(){
+                var this_option = $(this);
+                this_option.removeClass('empty-option');
                 if($(this).find('.js-ksp.opened').length) {
                     $(this).find('.js-ksp-remove').addClass('opened');
                     if($(this).find('.js-ksp.opened').length == $(this).find('.js-ksp').length) {
@@ -417,7 +425,7 @@ Camry.yesScreen = function() {
                     }
                 } else {
                     $(this).find('.js-ksp-add').addClass('opened');
-                    $(this).find('.js-ksp-remove').removeClass('opened');
+                    emptyOption(this_option);
                 }
             });
         }
@@ -435,46 +443,130 @@ Camry.yesScreen = function() {
         });
         setNav();
     }
+    this.navigation = {
+        left: function() {
+            var this_td = parseInt(active_td) - 1;
+            self.open(0, this_td);
+        },
+        right: function() {
+            var this_td = parseInt(active_td) + 1;
+            self.open(0, this_td);
+        },
+        top: function() {
+            var this_tr = parseInt(active_tr) + 1;
+            self.open(this_tr, active_td);
+            console.log(this_tr);
+        },
+        bottom: function() {
+            var this_tr = parseInt(active_tr) - 1;
+            self.open(this_tr, active_td);
+        }
+    };
     this.close = function() {
         self.start();
         $('.yes-overlay').removeClass('active');
         $('.js-yes-screen .empty-option-before, .empty-option-after').removeClass('show');
         parent.removeClass('opened');
+        $('.js-yes-option').siblings().attr('style', Help.Transform('translateY(0)'));
+        $('.yes-main-btn').removeClass('to-back');
+        $('.yes-navigation').fadeOut().removeClass('opened');
+        opened = false;
     }
     this.open = function(tr_id, td_id) {
         var time1 = 0;
         var time2 = 0;
+        var ksp_block = $('.js-ksp[data-tr="' + tr_id + '"][data-td="' + td_id + '"]');
         if(!opened) {
             opened = true;
             time1 = 500;
             time2 = 350;
+        } else {
+            if(!ksp_block.length || !ksp_block.hasClass('nav_active')) {
+                return false;
+            }
         }
+        active_tr = tr_id;
+        active_td = td_id;
+        $('.yes-navigation').fadeIn().addClass('opened');
+        $('.yes-main-btn').addClass('to-back');
+        var options_visible = $('.js-yes-option').not('.empty-option');
+        var this_option = ksp_block.parents('.js-yes-option');
+        var options_after = this_option.nextAll('.js-yes-option').not('.empty-option').length;
+        var options_before = this_option.prevAll('.js-yes-option').not('.empty-option').length;
         $('.js-yes-screen .empty-option-before, .empty-option-after').removeClass('show');
-        var show_empty = (3 - td_id) * 2;
-        if(show_empty > 0) {
-            for(var i = 0; i < show_empty; i++)
+        var show_empty_first = (3 - td_id) * 2;
+        if(show_empty_first > 0) {
+            for(var i = 0; i < show_empty_first; i++)
                 $('.js-yes-screen .empty-option-before').eq(i).addClass('show');
         } else {
-            show_empty = show_empty * (-1);
-            for(var i = 0; i < show_empty; i++)
+            show_empty_first = show_empty_first * (-1);
+            for(var i = 0; i < show_empty_first; i++)
                 $('.js-yes-screen .empty-option-after').eq(i).addClass('show');
         }
+        $('.js-ksp').removeClass('nav_active');
+        ksp_block.addClass('nav_active');
+        var next_td = parseInt(td_id) + 1;
+        var prev_td = parseInt(td_id) - 1;
+        var next_tr = parseInt(tr_id) + 1;
+        var prev_tr = parseInt(tr_id) - 1;
+        this_option.nextAll('.js-yes-option').not('.empty-option').eq(0).find('.js-ksp.opened[data-tr="0"]').addClass('nav_active');
+        this_option.prevAll('.js-yes-option').not('.empty-option').eq(0).find('.js-ksp.opened[data-tr="0"]').addClass('nav_active');
+        $('.js-ksp.opened[data-td="' + td_id + '"][data-tr="' + next_tr + '"]').addClass('nav_active');
+        $('.js-ksp.opened[data-td="' + td_id + '"][data-tr="' + prev_tr + '"]').addClass('nav_active');
+        $('.js-ksp').removeClass('active-ksp');
+        ksp_block.addClass('active-ksp');
         setTimeout(function(){
-            var cof = 25;
-            var new_bottom = - wrapper.height() + wrapper.height()/2 + osizes.height/2 + cof/* - osizes.height/2 + cof*/;
+            $('.js-yes-screen .empty-option-before, .empty-option-after').removeClass('show');
+            var show_empty = options_before - options_after;
+            if(show_empty > 0) {
+                for(var i = 0; i < show_empty; i++)
+                    $('.js-yes-screen .empty-option-after').eq(i).addClass('show');
+            } else {
+                show_empty = show_empty * (-1);
+                for(var i = 0; i < show_empty; i++)
+                    $('.js-yes-screen .empty-option-before').eq(i).addClass('show');
+            } 
+            var new_bottom = - $(document).height() + $(document).height()/2 + osizes.height/2;
+            var option_bottom = $('.ksp-opened-sample').height()*tr_id;
             parent.addClass('opened');
             $('.yes-overlay').addClass('active');
             setTimeout(function(){
                 yesCont.attr('style', Help.Transform('translateY(' + new_bottom + 'px)'));
+                this_option.attr('style', Help.Transform('translateY(' + option_bottom + 'px)'))
+                    .siblings().attr('style', Help.Transform('translateY(0)'));
             }, time2);
         }, time1);
-        var ksp_block = $('.js-ksp[data-tr="' + tr_id + '"][data-td="' + td_id + '"]');
-        var option_index = ksp_block.parents('.js-yes-option').index();
-        $('.js-ksp').removeClass('active-ksp');
-        ksp_block.addClass('active-ksp');
+        self.setNav();
+    }
+    this.setNav = function() {
+        var this_ksp = $('.js-ksp[data-tr="' + active_tr + '"][data-td="' + active_td + '"]');
+        var this_option = this_ksp.parents('.js-yes-option');
+        if(this_option.nextAll('.js-yes-option').not('.empty-option').eq(0).find('.js-ksp.opened[data-tr="0"]').length) {
+            $('.nav__right').removeClass('disabled');
+        } else {
+            $('.nav__right').addClass('disabled');
+        }
+        if(this_option.prevAll('.js-yes-option').not('.empty-option').eq(0).find('.js-ksp.opened[data-tr="0"]').length) {
+            $('.nav__left').removeClass('disabled');
+        } else {
+            $('.nav__left').addClass('disabled');
+        }
+        var next_tr = parseInt(active_tr) + 1;
+        var prev_tr = parseInt(active_tr) - 1;
+        if(this_option.find('.js-ksp.opened[data-tr="' + next_tr + '"]').length) {
+            $('.nav__top').removeClass('disabled');
+        } else {
+            $('.nav__top').addClass('disabled');
+        }
+        if(this_option.find('.js-ksp.opened[data-tr="' + prev_tr + '"]').length) {
+            $('.nav__bottom').removeClass('disabled');
+        } else {
+            $('.nav__bottom').addClass('disabled');
+        }
     }
     this.setEvents = function() {
         $(document).on('click', '.js-ksp', function() {
+            if(opened && !$(this).hasClass('nav_active')) return false;
             self.open($(this).attr('data-tr'), $(this).attr('data-td'));
             return false;
         });
@@ -483,10 +575,54 @@ Camry.yesScreen = function() {
             return false;
         });
         $(document).on('click', '.js-yes-list', function(e){
-            if($(e.target).hasClass('js-yes-list')) {
+            if($(e.target).hasClass('js-yes-list') || $(e.target).hasClass('js-yes-cont')) {
                 self.close();
             }
             return false;
+        });
+        $(document).on('click', '.nav__right', function() {
+            self.navigation.right();
+            return false;
+        });
+        $(document).on('click', '.nav__bottom', function() {
+            self.navigation.bottom();
+            return false;
+        });
+        $(document).on('click', '.nav__top', function() {
+            self.navigation.top();
+            return false;
+        });
+        $(document).on('click', '.nav__left', function() {
+            self.navigation.left();
+            return false;
+        });
+        $(document).on('keydown', function(e){ 
+            var code = e.which;
+            if(code == 40) {
+                self.navigation.bottom();
+            }
+            e.preventDefault();
+        });
+        $(document).on('keydown', function(e){ 
+            var code = e.which;
+            if(code == 38) {
+                self.navigation.top();
+            }
+            e.preventDefault();
+        });
+        $(document).on('keydown', function(e){ 
+            var code = e.which;
+            if(code == 37) {
+                self.navigation.left();
+            }
+            e.preventDefault();
+        });
+        $(document).on('keydown', function(e){ 
+            var code = e.which;
+            if(code == 39) {
+                self.navigation.right();
+            }
+            e.preventDefault();
         });
     }
     this.init = function() {
@@ -614,33 +750,21 @@ Camry.noScreen = function() {
 }
 Camry.Carousel = function() {
     $('.js-carousel').jcarousel();
-    $('.js-carousel-prev')
-        .on('jcarouselcontrol:active', function() {
-            $(this).removeClass('inactive');
-        })
-        .on('jcarouselcontrol:inactive', function() {
-            $(this).addClass('inactive');
-        })
-        .jcarouselControl({
-            // Options go here
-            target: '-=1'
-        });
+    $('.js-carousel-prev').on('jcarouselcontrol:active', function() {
+        $(this).removeClass('inactive');
+    }).on('jcarouselcontrol:inactive', function() {
+        $(this).addClass('inactive');
+    }).jcarouselControl({
+        target: '-=1'
+    });
 
-    /*
-     Next control initialization
-     */
-    $('.js-carousel-next')
-        .on('jcarouselcontrol:active', function() {
-            $(this).removeClass('inactive');
-        })
-        .on('jcarouselcontrol:inactive', function() {
-            $(this).addClass('inactive');
-        })
-        .jcarouselControl({
-            // Options go here
-            target: '+=1'
-        });
-
+    $('.js-carousel-next').on('jcarouselcontrol:active', function() {
+        $(this).removeClass('inactive');
+    }).on('jcarouselcontrol:inactive', function() {
+        $(this).addClass('inactive');
+    }).jcarouselControl({
+        target: '+=1'
+    });
 }
 
 $(function(){
@@ -649,7 +773,10 @@ $(function(){
     Camry.yesScreen();
     Camry.noScreen();
     $('.yes-overlay').blurjs({
-        source: '.js-yes-screen',
+        source: '.yes-screen-back .main-layer',
         radius: 175
+    });
+    $('#parallax-scene').parallax({
+      limitY: 0.1
     });
 });
