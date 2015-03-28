@@ -23,3 +23,18 @@
         border-color: rgba(255, 255, 255, .5);
     }
 }
+
+.circle-link {
+    display: inline-block;
+    vertical-align: middle;
+    width: 33rem / $fs;
+    height: 33rem / $fs;
+    line-height: 33rem / $fs;
+    border-radius: 39rem / $fs;
+    border: 3rem / $fs solid;
+    transition: all .5s ease;
+
+    &:hover {
+        opacity: .5;
+    }
+}
