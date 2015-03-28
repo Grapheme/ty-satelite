@@ -1,6 +1,20 @@
 extends layout
 
 block content
-  .wrapper
-    .wrapper-in(style="text-align: center; margin-top: 100px; font-size: 50px; font-family: 'toyota_display'; font-weight: 700;") Список всех KSP
-    a(href="http://toyota.ru" style="margin-left:100px; font-size: 15px; font-family: 'toyota_display'; font-weight: 700;") Записаться на тест-драйв
+    .wrapper.ksps
+        .wrapper-in
+            .ksps__title Узнать больше о новой Camry
+            .ksps-list
+                each i in [1,2,2,1]
+                    - var second_image = i + 1
+                    .list__item-big
+                        .big__block
+                            .block__content(style="background-image: url(images/tmp/ksp#{i}.jpg);")
+                        .big__block
+                            .block__content(style="background-image: url(images/tmp/ksp#{second_image}.jpg);")
+                        .big__hover
+                            .hover__info
+                                .hover__title Зимний пакет
+                                .hover__text подогрев 2 рядов сидений, лобовое стекло, боковые зеркала и особые омыватели фар
+
+

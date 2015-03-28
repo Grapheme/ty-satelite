@@ -599,30 +599,30 @@ Camry.yesScreen = function() {
         $(document).on('keydown', function(e){ 
             var code = e.which;
             if(code == 40) {
+                e.preventDefault();
                 self.navigation.bottom();
             }
-            e.preventDefault();
         });
         $(document).on('keydown', function(e){ 
             var code = e.which;
             if(code == 38) {
+                e.preventDefault();
                 self.navigation.top();
             }
-            e.preventDefault();
         });
         $(document).on('keydown', function(e){ 
             var code = e.which;
             if(code == 37) {
+                e.preventDefault();
                 self.navigation.left();
             }
-            e.preventDefault();
         });
         $(document).on('keydown', function(e){ 
             var code = e.which;
             if(code == 39) {
+                e.preventDefault();
                 self.navigation.right();
             }
-            e.preventDefault();
         });
     }
     this.init = function() {

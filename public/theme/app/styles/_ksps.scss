@@ -1,0 +1,145 @@
+.ksps {
+    background-image: url(../images/no/background.jpg);
+    background-size: 1920rem / $fs 1284rem / $fs;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-color: #0a0b1d;
+
+    .ksps__title {
+        font-family: 'toyota_display';
+        font-weight: 700;
+        font-size: 56rem / $fs;
+        color: #fff;
+        text-align: center;
+        margin-top: 70rem / $fs;
+    }
+
+    .ksps-list {
+        font-size: 0;
+        margin-top: 60rem / $fs;
+
+        .list__item-big {
+            position: relative;
+            display: inline-block;
+            vertical-align: top;
+            height: 305rem / $fs;
+            width: 50%;
+
+            .big__block {
+                position: relative;
+                display: inline-block;
+                vertical-align: top;
+                box-sizing: border-box;
+                width: 50%;
+                height: 305rem / $fs;
+                padding: 2.5rem / $fs;
+
+                .block__content {
+                    display: inline-block;
+                    height: 100%;
+                    width: 100%;
+                    background-position: center center;
+                    background-size: cover;
+                }
+
+                &:first-child {
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        border: 5rem / $fs solid #fff;
+                        opacity: 0;
+                        transition: all .5s ease;
+                    }
+                }
+            }
+
+            .big__hover {
+                position: absolute;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                left: 49%;
+                background: #fff;
+                opacity: 0;
+                transition: all .5s ease;
+                color: #000;
+                font-size: 13rem / $fs;
+
+                .hover__info {
+                    display: inline-block;
+                    vertical-align: middle;
+                    width: 90%;
+                    padding-left: 15rem / $fs;
+
+                    .hover__title {
+                        font-size: 30rem / $fs;
+                        font-weight: 700;
+                        font-family: 'toyota_display';
+                    }
+
+                    .hover__text {
+                        color: #323d46;
+                        //margin-top: 5rem / $fs;
+                    }
+                }
+
+                &:before {
+                    content: "";
+                    width: 0;
+                    height: 100%;
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+            }
+
+            &:hover {
+                .big__hover {
+                    opacity: 1;
+                }
+                .big__block {
+                    &:before {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+
+    &:before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 0;
+        bottom: 0;
+        width: 100rem / $fs;
+        margin-left: -960rem / $fs;
+        background: -moz-linear-gradient(left,  rgba(10, 11, 29, 1) 0%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(10, 11, 29, 1)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(left,  rgba(10, 11, 29, 1) 0%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(left,  rgba(10, 11, 29, 1) 0%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(left,  rgba(10, 11, 29, 1) 0%,rgba(0,0,0,0) 100%); /* IE10+ */
+        background: linear-gradient(to right,  rgba(10, 11, 29, 1) 0%,rgba(0,0,0,0) 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#131220', endColorstr='#00000000',GradientType=1 ); /* IE6-9 */
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 0;
+        bottom: 0;
+        width: 100rem / $fs;
+        margin-left: 860rem / $fs;
+        background: -moz-linear-gradient(left,  rgba(0,0,0,0) 0%, rgba(10, 11, 29, 1) 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(10, 11, 29, 1))); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(left,  rgba(0,0,0,0) 0%,rgba(10, 11, 29, 1) 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(left,  rgba(0,0,0,0) 0%,rgba(10, 11, 29, 1) 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(left,  rgba(0,0,0,0) 0%,rgba(10, 11, 29, 1) 100%); /* IE10+ */
+        background: linear-gradient(to right,  rgba(0,0,0,0) 0%,rgba(10, 11, 29, 1) 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#131220',GradientType=1 ); /* IE6-9 */
+    }
+}
