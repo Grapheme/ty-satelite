@@ -4,6 +4,8 @@
     background-position: center top;
     background-repeat: no-repeat;
     background-color: #0a0b1d;
+    padding-bottom: 35rem / $fs;
+    overflow: hidden;
 
     .ksps__title {
         font-family: 'toyota_display';
@@ -18,21 +20,17 @@
         font-size: 0;
         margin-top: 60rem / $fs;
 
-        .list__item-big {
+        .list__item {
             position: relative;
             display: inline-block;
             vertical-align: top;
-            height: 305rem / $fs;
-            width: 50%;
+            float: left;
 
-            .big__block {
+            .item__block {
                 position: relative;
                 display: inline-block;
                 vertical-align: top;
                 box-sizing: border-box;
-                width: 50%;
-                height: 305rem / $fs;
-                padding: 2.5rem / $fs;
 
                 .block__content {
                     display: inline-block;
@@ -42,32 +40,34 @@
                     background-size: cover;
                 }
 
-                &:first-child {
+                &:before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    border: 5rem / $fs solid #fff;
+                    opacity: 0;
+                    transition: all 0 ease;
+                }
+
+                &:hover {
                     &:before {
-                        content: "";
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        right: 0;
-                        bottom: 0;
-                        border: 5rem / $fs solid #fff;
-                        opacity: 0;
-                        transition: all .5s ease;
+                        transition: all .25s ease;
+                        opacity: 1;
                     }
                 }
             }
 
-            .big__hover {
+            .item__hover {
+                display: none;
                 position: absolute;
-                right: 0;
-                top: 0;
-                bottom: 0;
-                left: 49%;
+                 z-index: 1;
                 background: #fff;
-                opacity: 0;
-                transition: all .5s ease;
                 color: #000;
                 font-size: 13rem / $fs;
+                //transition: all .5s ease;
 
                 .hover__info {
                     display: inline-block;
@@ -83,7 +83,6 @@
 
                     .hover__text {
                         color: #323d46;
-                        //margin-top: 5rem / $fs;
                     }
                 }
 
@@ -95,14 +94,112 @@
                     vertical-align: middle;
                 }
             }
+        }
 
-            &:hover {
-                .big__hover {
-                    opacity: 1;
+        .list__item-big {
+            height: 305rem / $fs;
+            width: 50%;
+
+            .item__block {
+                width: 50%;
+                height: 305rem / $fs;
+                padding: 2.5rem / $fs;
+
+                &:first-child {
+                    .item__hover {
+                        right: -100%;
+                        top: 0;
+                        bottom: 0;
+                        left: 100%;
+                    }
                 }
-                .big__block {
-                    &:before {
-                        opacity: 1;
+
+                &:last-child {
+                    .item__hover {
+                        right: 100%;
+                        top: 0;
+                        bottom: 0;
+                        left: -100%;
+                    }
+                }
+            }
+        }
+
+        .list__item-md {
+            height: 305rem / $fs;
+            width: 25%;
+
+            .item__block {
+                width: 100%;
+                height: 152.5rem / $fs;
+                padding: 2.5rem / $fs;
+
+                &:first-child {
+                    .item__hover {
+                        right: 0;
+                        top: 0;
+                        bottom: -100%;
+                        top: 100%;
+                    }
+                }
+
+                &:last-child {
+                    .item__hover {
+                        right: 0;
+                        top: 0;
+                        bottom: 100%;
+                        top: -100%;
+                    }
+                }
+            }
+        }
+
+        .list__item-small {
+            height: 152.5rem / $fs;
+            width: 37.5%;
+
+            .item__block {
+                width: 33.33333333%;
+                height: 152.5rem / $fs;
+                padding: 2.5rem / $fs;
+
+                &:first-child {
+                    .item__hover {
+                        top: 0;
+                        bottom: 0;
+                        left: 100%;
+                        right: -200%;
+                    }
+                }
+
+                &:nth-child(2) {
+                    .item__hover {
+                        top: 0;
+                        bottom: 0;
+                        left: -200%;
+                        right: 100%;
+                    }
+                }
+
+                &:last-child {
+                    .item__hover {
+                        top: 0;
+                        bottom: 0;
+                        left: -200%;
+                        right: 100%;
+                    }
+                }
+            }
+
+            &.hover-right {
+                .item__block {
+                    &:nth-child(2) {
+                        .item__hover {
+                            top: 0;
+                            bottom: 0;
+                            left: 100%;
+                            right: -200%;
+                        }
                     }
                 }
             }
@@ -141,5 +238,40 @@
         background: -ms-linear-gradient(left,  rgba(0,0,0,0) 0%,rgba(10, 11, 29, 1) 100%); /* IE10+ */
         background: linear-gradient(to right,  rgba(0,0,0,0) 0%,rgba(10, 11, 29, 1) 100%); /* W3C */
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#131220',GradientType=1 ); /* IE6-9 */
+    }
+}
+
+.ksps-form-block {
+    padding: 70rem / $fs 70rem / $fs 90rem / $fs;
+    background: #fff;
+    margin-top: 2.5rem / $fs;
+    text-align: center;
+
+    .block__top {
+        padding-bottom: 25rem / $fs;
+
+        .top__title {
+            font-family: 'toyota_display';
+            font-size: 50rem / $fs;
+            font-weight: 700;
+        }
+
+        .top__desc {
+            font-size: 13rem / $fs;
+            margin-top: 10rem / $fs;
+        }
+    }
+
+    .block__form {
+        padding-top: 30rem / $fs;
+        border-top: 1px solid #d1d1d2;
+
+        .info__soc {
+            margin-bottom: 25rem / $fs;
+        }
+
+        .form__textarea, .form__btn {
+            margin-top: 10rem / $fs;
+        }
     }
 }

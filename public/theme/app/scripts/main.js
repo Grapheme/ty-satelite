@@ -766,12 +766,32 @@ Camry.Carousel = function() {
         target: '+=1'
     });
 }
+Camry.KSPs = function() {
+    var item_block = $('.item__block');
+    item_block.on('mouseover', function(e){
+        if($(e.target).hasClass('item__hover') || $(e.target).parents('.item__hover').length) return false;
+        $(this).find('.item__hover').fadeIn(250);
+    }).on('mouseout', function(){
+        $(this).find('.item__hover').hide();
+    });
+    $('.item__hover').on('mouseover', function(){
+        $(this).hide();
+    });
+    $('.list__item-small').each(function(){
+        var this_offset = $(this).find('.item__block').eq(1).offset().left - $(document).width()/2;
+        if(this_offset < 0) {
+            $(this).addClass('hover-right');
+        }
+    });
+}
 
 $(function(){
+    Camry.KSPs();
     Camry.Carousel();
     Camry.answer();
     Camry.yesScreen();
     Camry.noScreen();
+    autosize(document.querySelectorAll('textarea'));
     $('.yes-overlay').blurjs({
         source: '.yes-screen-back .main-layer',
         radius: 175

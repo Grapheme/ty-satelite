@@ -5,16 +5,70 @@ block content
         .wrapper-in
             .ksps__title Узнать больше о новой Camry
             .ksps-list
-                each i in [1,2,2,1]
-                    - var second_image = i + 1
-                    .list__item-big
-                        .big__block
-                            .block__content(style="background-image: url(images/tmp/ksp#{i}.jpg);")
-                        .big__block
-                            .block__content(style="background-image: url(images/tmp/ksp#{second_image}.jpg);")
-                        .big__hover
+                .list__item.list__item-big
+                    .item__block
+                        .block__content(style="background-image: url(images/tmp/ksp1.jpg);")
+                        .item__hover
                             .hover__info
                                 .hover__title Зимний пакет
                                 .hover__text подогрев 2 рядов сидений, лобовое стекло, боковые зеркала и особые омыватели фар
-
-
+                    .item__block
+                        .block__content(style="background-image: url(images/tmp/ksp2.jpg);")
+                        .item__hover
+                            .hover__info
+                                .hover__title Зимний пакет
+                                .hover__text подогрев 2 рядов сидений, лобовое стекло, боковые зеркала и особые омыватели фар
+                each i in [3,2,3]
+                    - var second_image = i + 1
+                    .list__item.list__item-md
+                        .item__block
+                            .block__content(style="background-image: url(images/tmp/ksp#{i}.jpg);")
+                            .item__hover
+                                .hover__info
+                                    .hover__title Зимний пакет
+                                    .hover__text подогрев 2 рядов сидений, лобовое стекло, боковые зеркала и особые омыватели фар
+                        .item__block
+                            .block__content(style="background-image: url(images/tmp/ksp#{second_image}.jpg);")
+                            .item__hover
+                                .hover__info
+                                    .hover__title Зимний пакет
+                                    .hover__text подогрев 2 рядов сидений, лобовое стекло, боковые зеркала и особые омыватели фар
+                each i in [1,2,3,2]
+                    .list__item.list__item-small
+                        .item__block
+                            .block__content(style="background-image: url(images/tmp/ksp1.jpg);")
+                            .item__hover
+                                .hover__info
+                                    .hover__title Зимний пакет
+                                    .hover__text подогрев 2 рядов сидений, лобовое стекло, боковые зеркала и особые омыватели фар
+                        .item__block
+                            .block__content(style="background-image: url(images/tmp/ksp2.jpg);")
+                            .item__hover
+                                .hover__info
+                                    .hover__title Зимний пакет
+                                    .hover__text подогрев 2 рядов сидений, лобовое стекло, боковые зеркала и особые омыватели фар
+                        .item__block
+                            .block__content(style="background-image: url(images/tmp/ksp3.jpg);")
+                            .item__hover
+                                .hover__info
+                                    .hover__title Зимний пакет
+                                    .hover__text подогрев 2 рядов сидений, лобовое стекло, боковые зеркала и особые омыватели фар
+            .clearfix
+            .ksps-form-block
+                .block__top
+                    .top__title Раскажите почему?
+                    .top__desc Ваше время бесценно. <br>Поэтому мы постарались, чтобы каждая минута пребывания в салоне новой Toyota Camry стала максимально<br>комфортной и была наполнена покоем. 
+                .block__form
+                    form
+                        .info__soc
+                            .soc__title Поделиться в соц.сетях
+                            .soc__btns
+                                a(href="#").btns__vk
+                                a(href="#").btns__fb
+                        .form__halfs
+                            input.us-input(placeholder="ФИО")
+                            input.us-input(placeholder="E-mail")
+                        .form__textarea
+                            textarea.us-input.js-autosize(placeholder="Сообщение")
+                        .form__btn
+                            button(type="submit").submit-btn Отправить

@@ -10,6 +10,14 @@ html {
     backface-visibility: hidden;
 }
 
+.clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
 .fl-r {
     float: right;
 }

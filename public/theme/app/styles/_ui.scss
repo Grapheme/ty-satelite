@@ -24,6 +24,58 @@
     }
 }
 
+.us-input {
+    border-radius: 25rem / $fs;
+    border: 3rem / $fs solid #92919c;
+    outline: none;
+    margin: 0 10rem / $fs;
+    font-size: 13rem / $fs;
+    font-family: 'toyota_display';
+}
+
+input.us-input {
+    padding: 0 10rem / $fs;
+    height: 43rem / $fs;
+    width: 210rem / $fs;
+}
+
+textarea.us-input {
+    padding: 20rem / $fs 10rem / $fs;
+    width: 470rem / $fs;
+    min-height: 60rem / $fs;
+}
+
+::-webkit-input-placeholder {
+    color: #262439;
+    text-transform: uppercase;
+}
+::-moz-placeholder          {
+    color: #262439;
+    text-transform: uppercase;
+}
+:-moz-placeholder           {
+    color: #262439;
+    text-transform: uppercase;
+}
+:-ms-input-placeholder      {
+    color: #262439;
+    text-transform: uppercase;
+}
+
+.submit-btn {
+    display: inline-block;
+    background: transparent;
+    border-radius: 25rem / $fs;
+    border: 3rem / $fs solid #262439;
+    height: 43rem / $fs;
+    padding: 0 70rem / $fs;
+    outline: none;
+    font-family: 'toyota_display';
+    font-size: 13rem / $fs;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
 .circle-link {
     display: inline-block;
     vertical-align: middle;
