@@ -209,4 +209,8 @@
     a {
         color: inherit;
     }
+
+    &.to-front {
+        z-index: 999;
+    }
 }

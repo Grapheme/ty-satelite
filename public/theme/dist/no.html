@@ -15,6 +15,11 @@
       <div class="wrapper">
         <div class="wrapper-in"><a href="#" class="main-logo"></a></div>
         <div class="no-screen yes-screen js-no-screen">
+          <div id="parallax-scene" class="no-screen-back">
+            <div data-depth="0.1" class="layer main-layer"></div>
+            <div data-depth="0.2" class="layer other-layer1"></div>
+            <div data-depth="0.4" class="layer other-layer2"></div>
+          </div>
           <div class="yes-screen-wrapper">
             <div class="wrapper-in">
               <div class="yes-top-text">Что сделает ее лучше?</div>
@@ -22,7 +27,12 @@
             <div class="yes-screen__list js-yes-list">
               <div class="list__cont js-yes-cont"></div>
             </div>
-            <div class="yes-main-btn"><a href="ksps.html" class="us-btn js-no-submit">Проверить наличие</a></div>
+            <div class="yes-main-btn">
+              <form id="nosubmit">
+                <input type="hidden" name="ksps">
+                <button type="submit" class="us-btn js-no-submit">Проверить наличие</button>
+              </form>
+            </div>
           </div>
         </div>
         <footer class="footer">

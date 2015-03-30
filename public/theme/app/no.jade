@@ -5,13 +5,19 @@ block content
     .wrapper-in
       a(href="#").main-logo
     .no-screen.yes-screen.js-no-screen
+      .no-screen-back#parallax-scene
+        .layer.main-layer(data-depth="0.1")
+        .layer.other-layer1(data-depth="0.2")
+        .layer.other-layer2(data-depth="0.4")
       .yes-screen-wrapper
         .wrapper-in
           .yes-top-text Что сделает ее лучше?
         .yes-screen__list.js-yes-list
           .list__cont.js-yes-cont
         .yes-main-btn
-          a(href="ksps.html").us-btn.js-no-submit Проверить наличие
+          form#nosubmit
+            input(type="hidden" name="ksps")
+            button(type="submit").us-btn Проверить наличие
     footer.footer
       .wrapper-in
         span &copy; Toyota

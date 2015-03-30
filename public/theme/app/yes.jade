@@ -56,5 +56,7 @@ block content
               each i in [0,1,2,3,4,5]
               .yes-screen__option.empty-option-after
         .yes-main-btn
-          a(href="complect.html").us-btn Посмотреть комплектацию
+          form(action="")#yessubmit
+            input(name="ksps" type="hidden")
+            button(type="submit").us-btn Посмотреть комплектацию
       include footer

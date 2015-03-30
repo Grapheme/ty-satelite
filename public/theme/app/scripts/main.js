@@ -43,14 +43,14 @@ Dictionary.KSP = [
         image: "./images/tmp/ksp2.jpg",
         ksp: [
             {
-                id: 1,
+                id: 5,
                 preview: "Новый двигатель 2.0 L с 6-ступенчатой АКПП",
                 image: "./images/tmp/ksp3.jpg",
                 title: "Телефонные звонки",
                 desc: "Теперь вы сможете совершать телефонные звонки, читать, создавать и отправлять сообщения, набираяя текст прямо на сенсорном экране. Через MirrorLink вы сможете слушать любимую музыку через аудиосистему автомобиля."
             },
             {
-                id: 2,
+                id: 6,
                 preview: "Новый двигатель 2.0 L с 6-ступенчатой АКПП",
                 image: "./images/tmp/ksp4.jpg",
                 title: "Телефонные звонки",
@@ -64,21 +64,21 @@ Dictionary.KSP = [
         image: "./images/tmp/ksp3.jpg",
         ksp: [
             {
-                id: 1,
+                id: 7,
                 preview: "Новый двигатель 2.0 L с 6-ступенчатой АКПП",
                 image: "./images/tmp/ksp1.jpg",
                 title: "Телефонные звонки",
                 desc: "Теперь вы сможете совершать телефонные звонки, читать, создавать и отправлять сообщения, набираяя текст прямо на сенсорном экране. Через MirrorLink вы сможете слушать любимую музыку через аудиосистему автомобиля."
             },
             {
-                id: 2,
+                id: 8,
                 preview: "Новый двигатель 2.0 L с 6-ступенчатой АКПП",
                 image: "./images/tmp/ksp2.jpg",
                 title: "Телефонные звонки",
                 desc: "Теперь вы сможете совершать телефонные звонки, читать, создавать и отправлять сообщения, набираяя текст прямо на сенсорном экране. Через MirrorLink вы сможете слушать любимую музыку через аудиосистему автомобиля."
             },
             {
-                id: 3,
+                id: 9,
                 preview: "Новый двигатель 2.0 L с 6-ступенчатой АКПП",
                 image: "./images/tmp/ksp3.jpg",
                 title: "Телефонные звонки",
@@ -92,14 +92,14 @@ Dictionary.KSP = [
         image: "./images/tmp/ksp4.jpg",
         ksp: [
             {
-                id: 1,
+                id: 10,
                 preview: "Новый двигатель 2.0 L с 6-ступенчатой АКПП",
                 image: "./images/tmp/ksp4.jpg",
                 title: "Телефонные звонки",
                 desc: "Теперь вы сможете совершать телефонные звонки, читать, создавать и отправлять сообщения, набираяя текст прямо на сенсорном экране. Через MirrorLink вы сможете слушать любимую музыку через аудиосистему автомобиля."
             },
             {
-                id: 2,
+                id: 11,
                 preview: "Новый двигатель 2.0 L с 6-ступенчатой АКПП",
                 image: "./images/tmp/ksp1.jpg",
                 title: "Телефонные звонки",
@@ -113,21 +113,21 @@ Dictionary.KSP = [
         image: "./images/tmp/ksp1.jpg",
         ksp: [
             {
-                id: 1,
+                id: 12,
                 preview: "Новый двигатель 2.0 L с 6-ступенчатой АКПП",
                 image: "./images/tmp/ksp2.jpg",
                 title: "Телефонные звонки",
                 desc: "Теперь вы сможете совершать телефонные звонки, читать, создавать и отправлять сообщения, набираяя текст прямо на сенсорном экране. Через MirrorLink вы сможете слушать любимую музыку через аудиосистему автомобиля."
             },
             {
-                id: 2,
+                id: 13,
                 preview: "Новый двигатель 2.0 L с 6-ступенчатой АКПП",
                 image: "./images/tmp/ksp3.jpg",
                 title: "Телефонные звонки",
                 desc: "Теперь вы сможете совершать телефонные звонки, читать, создавать и отправлять сообщения, набираяя текст прямо на сенсорном экране. Через MirrorLink вы сможете слушать любимую музыку через аудиосистему автомобиля."
             },
             {
-                id: 3,
+                id: 14,
                 preview: "Новый двигатель 2.0 L с 6-ступенчатой АКПП",
                 image: "./images/tmp/ksp4.jpg",
                 title: "Телефонные звонки",
@@ -141,14 +141,14 @@ Dictionary.KSP = [
         image: "./images/tmp/ksp2.jpg",
         ksp: [
             {
-                id: 1,
+                id: 15,
                 preview: "Новый двигатель 2.0 L с 6-ступенчатой АКПП",
                 image: "./images/tmp/ksp1.jpg",
                 title: "Телефонные звонки",
                 desc: "Теперь вы сможете совершать телефонные звонки, читать, создавать и отправлять сообщения, набираяя текст прямо на сенсорном экране. Через MirrorLink вы сможете слушать любимую музыку через аудиосистему автомобиля."
             },
             {
-                id: 2,
+                id: 16,
                 preview: "Новый двигатель 2.0 L с 6-ступенчатой АКПП",
                 image: "./images/tmp/ksp2.jpg",
                 title: "Телефонные звонки",
@@ -162,21 +162,21 @@ Dictionary.KSP = [
         image: "./images/tmp/ksp3.jpg",
         ksp: [
             {
-                id: 1,
+                id: 17,
                 preview: "Новый двигатель 2.0 L с 6-ступенчатой АКПП",
                 image: "./images/tmp/ksp3.jpg",
                 title: "Телефонные звонки",
                 desc: "Теперь вы сможете совершать телефонные звонки, читать, создавать и отправлять сообщения, набираяя текст прямо на сенсорном экране. Через MirrorLink вы сможете слушать любимую музыку через аудиосистему автомобиля."
             },
             {
-                id: 2,
+                id: 18,
                 preview: "Новый двигатель 2.0 L с 6-ступенчатой АКПП",
                 image: "./images/tmp/ksp4.jpg",
                 title: "Телефонные звонки",
                 desc: "Теперь вы сможете совершать телефонные звонки, читать, создавать и отправлять сообщения, набираяя текст прямо на сенсорном экране. Через MirrorLink вы сможете слушать любимую музыку через аудиосистему автомобиля."
             },
             {
-                id: 3,
+                id: 19,
                 preview: "Новый двигатель 2.0 L с 6-ступенчатой АКПП",
                 image: "./images/tmp/ksp1.jpg",
                 title: "Телефонные звонки",
@@ -241,7 +241,7 @@ Dictionary.NoScreen = [
         ]
     },
     {
-        id: 7,
+        id: 733,
         name: "Функциональность",
         ksp: [
             { id: 1 },
@@ -259,14 +259,14 @@ Help.Transform = function(transform_value) {
     });
     return str;
 }
-Camry.answer = function() {
+/*Camry.answer = function() {
     var link_yes = $('.js-answer-yes'),
         link_no = $('.js-answer-no'),
         block_yes = $('.js-yes-block'),
         block_no = $('.js-no-block');
         back_yes = $('.js-yes-back');
         back_no = $('.js-no-back');
-    /*var showYes = function() {
+    var showYes = function() {
         block_yes.addClass('active');
         $('.js-yes-screen').show();
         block_no.addClass('hide');
@@ -285,7 +285,7 @@ Camry.answer = function() {
             $('.js-main-screen').fadeOut();
             $('.js-no-screen').addClass('active');
         }, 1000);
-    }*/
+    }
     var init = function() {
         link_yes.on('click', function(){
             window.location.href = "yes.html";
@@ -295,7 +295,7 @@ Camry.answer = function() {
         });
     }
     init();
-}
+}*/
 Camry.yesScreen = function() {
     var self = this,
         parent = $('.js-yes-screen'),
@@ -358,6 +358,12 @@ Camry.yesScreen = function() {
             html += '<div class="yes-screen__option empty-option-after"></div>';
         }
         $('.js-yes-screen .js-yes-cont').html(html);
+        if($.cookie('ksps')) {
+            var kspsObj = JSON.parse($.cookie('ksps'));
+            $.each(kspsObj.items, function(index, value){
+                $('.js-ksp[data-ksp-id="' + value + '"]').addClass('opened');
+            });
+        }
     }
     this.start = function() {
         var new_bottom = -262/16;
@@ -413,6 +419,16 @@ Camry.yesScreen = function() {
             option.addClass('empty-option');
         }
         var setNav = function(this_block) {
+            var kspObj = {};
+            var kspArray = [];
+            $('.js-ksp.opened').each(function(){
+                var this_id = $(this).attr('data-ksp-id');
+                kspArray.push(this_id);
+            });
+            kspObj.items = kspArray;
+            var kspJSON = JSON.stringify(kspObj);
+            $.cookie('ksps', kspJSON);
+            $('#yessubmit').find('input').val(kspJSON);
             $('.js-yes-screen .js-yes-option').each(function(){
                 var this_option = $(this);
                 this_option.removeClass('empty-option');
@@ -455,7 +471,6 @@ Camry.yesScreen = function() {
         top: function() {
             var this_tr = parseInt(active_tr) + 1;
             self.open(this_tr, active_td);
-            console.log(this_tr);
         },
         bottom: function() {
             var this_tr = parseInt(active_tr) - 1;
@@ -470,6 +485,7 @@ Camry.yesScreen = function() {
         $('.js-yes-option').siblings().attr('style', Help.Transform('translateY(0)'));
         $('.yes-main-btn').removeClass('to-back');
         $('.yes-navigation').fadeOut().removeClass('opened');
+        $('.footer').addClass('to-front');
         opened = false;
     }
     this.open = function(tr_id, td_id) {
@@ -487,6 +503,7 @@ Camry.yesScreen = function() {
         }
         active_tr = tr_id;
         active_td = td_id;
+        $('.footer').removeClass('to-front');
         $('.yes-navigation').fadeIn().addClass('opened');
         $('.yes-main-btn').addClass('to-back');
         var options_visible = $('.js-yes-option').not('.empty-option');
@@ -565,8 +582,11 @@ Camry.yesScreen = function() {
         }
     }
     this.setEvents = function() {
-        $(document).on('click', '.js-ksp', function() {
-            if(opened && !$(this).hasClass('nav_active')) return false;
+        $(document).on('click', '.js-ksp', function(e) {
+            if(opened && !$(this).hasClass('nav_active')) {
+                self.close();
+                return false;
+            }
             self.open($(this).attr('data-tr'), $(this).attr('data-td'));
             return false;
         });
@@ -624,12 +644,20 @@ Camry.yesScreen = function() {
                 self.navigation.right();
             }
         });
+        $(document).on('click', '#yessubmit [type="submit"]', function(e){
+            e.preventDefault();
+            var form = $(this).parents('form');
+            console.log(form.find('input').val());
+            form.submit();
+            return false;
+        });
     }
     this.init = function() {
         self.setHtml();
         self.start();
         self.setEvents();
         self.kspNav();
+        $('.footer').addClass('to-front');
     }
     self.init();
 }
@@ -641,14 +669,6 @@ Camry.noScreen = function() {
         yesBlock = parent.find('.js-yes-list'),
         wrapper = $('.wrapper'),
         opened = false;
-    var csizes = {
-            height: 0,
-            width: 181
-        };
-    var osizes = {
-            height: 545,
-            width: 610
-        };
     this.setHtml = function() {
         var obj = Dictionary.NoScreen;
         var dataid = 0;
@@ -666,7 +686,7 @@ Camry.noScreen = function() {
                     </div>';
                 ksp_step--;
             });
-            html += '<div data-id="' + dataid + '" class="yes-screen__option js-yes-option">\
+            html += '<div data-option-id="' + value.id + '" data-id="' + dataid + '" class="yes-screen__option js-yes-option">\
               <div class="yes-screen__cont">\
                 <div class="list__other-items">\
                   ' + options_str + '\
@@ -706,6 +726,14 @@ Camry.noScreen = function() {
             setNav(this_block);
         }
         var setNav = function(this_block) {
+            var grades = {};
+            $('.js-no-screen .js-yes-option').each(function(){
+                var this_id = $(this).attr('data-option-id');
+                var this_grade = $(this).find('.js-ksp.opened').length;
+                grades[this_id] = this_grade;
+            });
+            var JSONgrades = JSON.stringify(grades);
+            $('#nosubmit input').val(JSONgrades);
             if($('.js-no-screen .js-ksp').hasClass('opened')){
                 $('.js-no-submit').removeAttr('disabled');
                 $('.js-no-submit').removeAttr('onclick');
@@ -737,6 +765,13 @@ Camry.noScreen = function() {
             if(!$(this).hasClass('opened')) return false;
             var id = $(this).parents('.js-yes-option').attr('data-id');
             deleteKsp(id);
+            return false;
+        });
+        $(document).on('click', '#nosubmit [type="submit"]', function(e){
+            e.preventDefault();
+            var form = $(this).parents('form');
+            console.log(form.find('input').val());
+            form.submit();
             return false;
         });
         setNav();
@@ -861,7 +896,7 @@ $(function(){
     });
     Camry.KSPs();
     Camry.Carousel();
-    Camry.answer();
+    //Camry.answer();
     Camry.yesScreen();
     Camry.noScreen();
     autosize(document.querySelectorAll('textarea'));

@@ -24,6 +24,13 @@
     }
 }
 
+button.us-btn {
+    background: transparent;
+    outline: none;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
 .us-input {
     border-radius: 25rem / $fs;
     border: 3rem / $fs solid #92919c;
