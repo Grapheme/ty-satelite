@@ -4,7 +4,7 @@
     background-position: center top;
     background-repeat: no-repeat;
     background-color: #0a0b1d;
-    padding-bottom: 35rem / $fs;
+    padding-bottom: 95rem / $fs;
     overflow: hidden;
 
     .ksps__title {
@@ -242,10 +242,22 @@
 }
 
 .ksps-form-block {
-    padding: 70rem / $fs 70rem / $fs 90rem / $fs;
+    padding: 70rem / $fs 70rem / $fs 0;
     background: #fff;
     margin-top: 2.5rem / $fs;
     text-align: center;
+
+    #why-form {
+        padding: 0 0 90rem / $fs;
+    }
+
+    .form__final {
+        display: none;
+        padding: 25rem / $fs 0 50rem / $fs;
+        font-family: 'toyota_display';
+        font-size: 13rem / $fs;
+        text-transform: uppercase;
+    }
 
     .block__top {
         padding-bottom: 25rem / $fs;
@@ -263,6 +275,7 @@
     }
 
     .block__form {
+        position: relative;
         padding-top: 30rem / $fs;
         border-top: 1px solid #d1d1d2;
 
@@ -272,6 +285,17 @@
 
         .form__textarea, .form__btn {
             margin-top: 10rem / $fs;
+        }
+
+        .info__error {
+            position: absolute;
+            bottom: 35rem / $fs;
+            left: 0;
+            right: 0;
+            color: #ad0508;
+            font-family: 'toyota_display';
+            font-size: 13rem / $fs;
+            text-transform: uppercase;
         }
     }
 }

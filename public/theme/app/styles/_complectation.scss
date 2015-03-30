@@ -85,6 +85,10 @@
                         background-size: auto 60%;
                         background-position: center center;
                         background-repeat: no-repeat;
+
+                        &:hover {
+                            opacity: .5;
+                        }
                     }
 
                     &.prev {
@@ -215,12 +219,13 @@
         color: #262439;
 
         .us-btn {
-            color: inherit;
-            border-color: inherit;
+            color: #2a293b;
+            border-color: #2a293b;
 
             &:hover {
                 opacity: 1;
-                border-color: #fff;
+                border-color: #2a293b;
+                background: #2a293b;
                 color: #fff;
             }
         }
@@ -233,6 +238,18 @@
                             border-color: #262439;
                             background-image: url(../images/arrow-dark.svg);
                         }
+                    }
+                }
+            }
+        }
+
+        .info__soc {
+            .soc__btns {
+                a {
+                    &:hover {
+                        background: #2a293b;
+                        border-color: #2a293b;
+                        color: #fff;
                     }
                 }
             }
@@ -264,6 +281,12 @@
 
             &:before {
                 @extend .fa;
+            }
+
+            &:hover {
+                background: #fff;
+                color: #151526;
+                border-color: #fff;
             }
 
             &.btns__vk:before {

@@ -394,8 +394,8 @@ Camry.yesScreen = function() {
                 this_item.removeClass('active');
                 setTimeout(function(){
                     background_block.addClass('active');
-                }, 500);
-            }, 500);
+                }, 1000);
+            }, 1000);
             setNav(this_block);
         }
         var deleteKsp = function(id) {
@@ -784,8 +784,81 @@ Camry.KSPs = function() {
         }
     });
 }
+Camry.ShowMobile = function() {
+    var md = new MobileDetect(window.navigator.userAgent);
+    if((md.mobile() || md.phone() || md.tablet()) && $.cookie('ShowSite') != 1) {
+        $('.js-mobile-screen').show();
+        $('.js-content').hide();
+        $('.js-show-site').on('click', function(){
+            $.cookie('ShowSite', 1);
+            window.location.href = window.location.href;
+            return false;
+        });
+        throw new Error("This site isn't for mobile devices");
+    }
+}
+Camry.Validate = function(form, callback) {
+    function validateEmail(email) {
+        var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+        return re.test(email);
+    }
+    form.on('submit', function(e){
+        e.preventDefault();
+        var validate = true;
+        var message = 'Сообщение не отправленно.';
+        if(form.find('[name="name"]').val().length == 0) {
+            form.find('[name="name"]').addClass('input-error');
+            message += ' Введите ФИО.';
+            validate = false;
+        } else {
+            form.find('[name="name"]').removeClass('input-error');
+        }
+        if(!validateEmail(form.find('[name="email"]').val())) {
+            form.find('[name="email"]').addClass('input-error');
+            message += ' Поле e-mail введено некорректно.';
+            validate = false;
+        } else {
+            form.find('[name="email"]').removeClass('input-error');
+        }
+        if(form.find('[name="message"]').val().length == 0) {
+            form.find('[name="message"]').addClass('input-error');
+            message += ' Введите сообщение.';
+            validate = false;
+        } else {
+            form.find('[name="message"]').removeClass('input-error');
+        }
+        if(validate) {
+            form.find('.js-form-errors').text('');
+            callback(form);
+        } else {
+            form.find('.js-form-errors').text(message);
+        }
+        return false;
+    });
+}
 
 $(function(){
+    Camry.ShowMobile();
+    Camry.Validate($('#why-form'), function(form){
+        var response_cont = $('.js-form-final');
+        var options = { 
+            beforeSubmit: function(){
+                $(form).find('[type="submit"]').addClass('loading')
+                    .attr('disabled', 'disabled');
+            }, 
+            success: function(data){
+                form.slideUp();
+                response_cont.slideDown();
+                $(form).find('[type="submit"]').removeClass('loading')
+                    .removeAttr('disabled');
+            },
+            error: function(data) {
+                $(form).find('[type="submit"]').removeClass('loading')
+                    .removeAttr('disabled');
+            }
+        };
+        $(form).ajaxSubmit(options);
+    });
     Camry.KSPs();
     Camry.Carousel();
     Camry.answer();

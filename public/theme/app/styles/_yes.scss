@@ -193,19 +193,20 @@
                 position: relative;
                 height: 0;
                 overflow: hidden;
-                transition: all .75s $defaultEasing;
+                transition: all 1s $defaultEasing;
+                margin-top: 2px;
 
                 .other-item__content {
                     height: 0;
                     overflow: hidden;
-                    transition: height .75s $defaultEasing;
+                    transition: height 1s $defaultEasing;
 
                     .other-item__background {
                         position: relative;
                         height: 150rem / $fs;
                         background-size: cover;
                         background-position: center center;
-                        transition: all .75s $defaultEasing;
+                        transition: all 1s $defaultEasing;
 
                         .background__text {
                             position: absolute;
@@ -223,12 +224,25 @@
                 }
 
                 .other-item__line {
+                    position: relative;
+                    overflow: hidden;
                     height: 0;
-                    background-image: url(../images/yes/item_line.jpg);
-                    background-size: 100% 100%;
-                    background-position: center center;
-                    opacity: .33;
-                    transition: height .75s $defaultEasing;
+                    // background-image: url(../images/yes/item_line.jpg);
+                    // background-size: 100% 100%;
+                    // background-position: center center;
+                    background: rgba(255, 255, 255, .17);
+                    transition: height 1s $defaultEasing;
+                    //filter: blur(5px);
+
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        top: -10px;
+                        left: -10px;
+                        right: -10px;
+                        bottom: -10px;
+                        background: rgba(255, 255, 255, .17);
+                    }
                 }
 
                 &.opened {
@@ -393,10 +407,6 @@
         }
         .list__other-item {
             margin-top: 2rem / $fs !important;
-
-            .other-item__line {
-                background: #fff !important;
-            }
 
             &.opened {
                 &:hover {

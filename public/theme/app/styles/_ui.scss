@@ -31,6 +31,10 @@
     margin: 0 10rem / $fs;
     font-size: 13rem / $fs;
     font-family: 'toyota_display';
+
+    &.input-error {
+        border-color: #ad0508;
+    }
 }
 
 input.us-input {
@@ -62,6 +66,23 @@ textarea.us-input {
     text-transform: uppercase;
 }
 
+.input-error::-webkit-input-placeholder {
+    color: #ad0508;
+    text-transform: uppercase;
+}
+.input-error::-moz-placeholder          {
+    color: #ad0508;
+    text-transform: uppercase;
+}
+.input-error:-moz-placeholder           {
+    color: #ad0508;
+    text-transform: uppercase;
+}
+.input-error:-ms-input-placeholder      {
+    color: #ad0508;
+    text-transform: uppercase;
+}
+
 .submit-btn {
     display: inline-block;
     background: transparent;
@@ -74,6 +95,16 @@ textarea.us-input {
     font-size: 13rem / $fs;
     font-weight: 700;
     text-transform: uppercase;
+    transition: all .5s ease;
+
+    &:hover, &.loading {
+        background: #262439;
+        color: #fff;
+    }
+
+    &[disabled="disabled"] {
+        opacity: .5;
+    }
 }
 
 .circle-link {
@@ -85,8 +116,4 @@ textarea.us-input {
     border-radius: 39rem / $fs;
     border: 3rem / $fs solid;
     transition: all .5s ease;
-
-    &:hover {
-        opacity: .5;
-    }
 }

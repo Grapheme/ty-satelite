@@ -19,7 +19,19 @@ html.no-js(lang='')
     // endbuild
   body
     
-    block content
+    .js-content
+        block content
+
+    .mobile-screen.js-mobile-screen
+      a(href="#").main-logo.mobile-logo
+      .screen__info
+        .info__title Новая Toyota Camry:<br>Достойна ли она<br>Вашего внимания?
+        .info__desc Функциональность сайта<br>в мобильной версии ограничена.
+      .screen__bottom
+        .bottom__btn
+          a(href="#").js-show-site Все равно открыть сайт
+        .bottom__link
+          a(href="//toyota.ru") Перейти на официальный сайт Toyota
 
     // build:js scripts/vendor.js
     // bower:js
@@ -31,6 +43,9 @@ html.no-js(lang='')
     script(src='/bower_components/parallax/deploy/jquery.parallax.js')
     script(src='/bower_components/parallax/deploy/jquery.parallax.min.js')
     script(src='/bower_components/autosize/dest/autosize.js')
+    script(src='/bower_components/mobile-detect/mobile-detect.min.js')
+    script(src='/bower_components/jquery.cookie/jquery.cookie.js')
+    script(src='/bower_components/jquery-form/jquery.form.js')
     // endbower
     // endbuild
     // build:js scripts/main.js
