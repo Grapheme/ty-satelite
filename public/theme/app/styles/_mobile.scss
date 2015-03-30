@@ -1,0 +1,65 @@
+.mobile-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-image: url(../images/mobile-back.jpg);
+    background-position: center center;
+    background-size: cover;
+    text-align: center;
+
+    .screen__info {
+        margin-top: 184rem / $fs;
+
+        .info__title {
+            font-size: 50rem / $fs;
+            font-family: 'toyota_display';
+            font-weight: 700;
+            line-height: 1;
+            color: #fff;
+            text-shadow: 0.5rem / $fs 0.866rem / $fs 0rem / $fs rgba(21, 19, 35, 0.75);
+        }
+
+        .info__desc {
+            font-size: 30rem / $fs;
+            font-family: 'toyota_display';
+            color: rgb(255, 255, 255);
+            line-height: 1.2;
+            margin-top: 50rem / $fs;
+        }
+    }
+
+    .screen__bottom {
+        position: absolute;
+        bottom: 20rem / $fs;
+        left: 0;
+        right: 0;
+
+        .bottom__btn {
+            a {
+                display: inline-block;
+                vertical-align: middle;
+                color: #fff;
+                text-decoration: none;
+                border-radius: 17rem / $fs;
+                border: 3rem / $fs solid #fff;
+                padding: 0 50rem / $fs;
+                height: 50rem / $fs;
+                line-height: 50rem / $fs;
+                font-size: 26rem / $fs;
+                font-family: 'toyota_display';
+            }
+        }
+
+        .bottom__link {
+            margin-top: 45rem / $fs;
+
+            a {
+                font-size: 20rem / $fs;
+                font-family: 'toyota_display';
+                color: #fff;
+            }
+        }
+    }
+}
