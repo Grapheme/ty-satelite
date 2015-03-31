@@ -55,23 +55,36 @@ block content
                                     .hover__text подогрев 2 рядов сидений, лобовое стекло, боковые зеркала и особые омыватели фар
             .clearfix
             .ksps-form-block
-                .block__top
-                    .top__title Раскажите почему?
-                    .top__desc Ваше время бесценно. <br>Поэтому мы постарались, чтобы каждая минута пребывания в салоне новой Toyota Camry стала максимально<br>комфортной и была наполнена покоем. 
-                .block__form
-                    form#why-form(action="json/test.json")
-                        .info__error.js-form-errors
-                        .info__soc
-                            .soc__title Поделиться в соц.сетях
-                            .soc__btns
-                                a(href="#").btns__vk
-                                a(href="#").btns__fb
-                        .form__halfs
-                            input.us-input(placeholder="ФИО" name="name")
-                            input.us-input(placeholder="E-mail" name="email")
-                        .form__textarea
-                            textarea.us-input.js-autosize(placeholder="Сообщение" name="message")
-                        .form__btn
-                            button(type="submit").submit-btn Отправить
-                .js-form-final.form__final Спасибо! ваше сообщение успешно отправлено.
+                .block__choose#choose
+                    .block__top
+                        .top__title Согласны?
+                        .top__btns
+                            a(href="//toyota.ru").choose-btn
+                                span.btn__main Да
+                                span.btn__desc
+                                    span Записаться<br>на тест-драйв
+                            a(href="#").choose-btn.js-show-form
+                                span.btn__main Нет
+                                span.btn__desc
+                                    span Остались<br>сомнения
+                .block__form-cont#form
+                    .block__top
+                        .top__title Раскажите почему?
+                        .top__desc Ваше время бесценно. <br>Поэтому мы постарались, чтобы каждая минута пребывания в салоне новой Toyota Camry стала максимально<br>комфортной и была наполнена покоем. 
+                    .block__form
+                        form#why-form(action="json/test.json")
+                            .info__error.js-form-errors
+                            .info__soc
+                                .soc__title Поделиться в соц.сетях
+                                .soc__btns
+                                    a(href="#").btns__vk
+                                    a(href="#").btns__fb
+                            .form__halfs
+                                input.us-input(placeholder="ФИО" name="name")
+                                input.us-input(placeholder="E-mail" name="email")
+                            .form__textarea
+                                textarea.us-input.js-autosize(placeholder="Сообщение" name="message")
+                            .form__btn
+                                button(type="submit").submit-btn Отправить
+                    .js-form-final.form__final Спасибо! ваше сообщение успешно отправлено.
         include footer

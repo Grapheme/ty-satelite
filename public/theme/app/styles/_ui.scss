@@ -114,6 +114,57 @@ textarea.us-input {
     }
 }
 
+.choose-btn {
+    display: inline-block;
+    vertical-align: middle;
+    width: 230rem / $fs;
+    height: 45rem / $fs;
+    line-height: 45rem / $fs;
+    border-radius: 45rem / $fs;
+    border: 2px solid #c6c5ca;
+    text-decoration: none;
+    margin: 0 5rem / $fs;
+    color: #2a293b;
+    transition: all .5s ease;
+
+    .btn__main {
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 25rem / $fs;
+        text-transform: uppercase;
+    }
+
+    .btn__desc {
+        position: relative;
+        top: -.2em;
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 13rem / $fs;
+        width: 0;
+        opacity: 0;
+        transition: all .5s ease;
+
+        span {
+            display: inline-block;
+            vertical-align: middle;
+            line-height: .9;
+            text-align: left;
+            text-transform: lowercase;
+            margin-left: 8rem / $fs;
+            width: 6rem;
+        }
+    }
+
+    &:hover {
+        border-color: #2a293b;
+
+        .btn__desc {
+            opacity: 1;
+            width: 5rem;
+        }
+    }
+}
+
 .circle-link {
     display: inline-block;
     vertical-align: middle;

@@ -9,43 +9,6 @@ Help.Transform = function(transform_value) {
     });
     return str;
 }
-/*Camry.answer = function() {
-    var link_yes = $('.js-answer-yes'),
-        link_no = $('.js-answer-no'),
-        block_yes = $('.js-yes-block'),
-        block_no = $('.js-no-block');
-        back_yes = $('.js-yes-back');
-        back_no = $('.js-no-back');
-    var showYes = function() {
-        block_yes.addClass('active');
-        $('.js-yes-screen').show();
-        block_no.addClass('hide');
-        setTimeout(function(){
-            $('.js-background').fadeOut();
-            $('.js-main-screen').fadeOut();
-            $('.js-yes-screen').addClass('active');
-        }, 1000);
-    }
-    var showNo = function() {
-        block_no.addClass('active');
-        $('.js-no-screen').show();
-        block_yes.addClass('hide');
-        setTimeout(function(){
-            $('.js-background').fadeOut();
-            $('.js-main-screen').fadeOut();
-            $('.js-no-screen').addClass('active');
-        }, 1000);
-    }
-    var init = function() {
-        link_yes.on('click', function(){
-            window.location.href = "yes.html";
-        });
-        link_no.on('click', function(){
-            window.location.href = "no.html";
-        });
-    }
-    init();
-}*/
 Camry.yesScreen = function() {
     if(!$('.js-yes-screen').length) return;
     var self = this,
@@ -252,6 +215,8 @@ Camry.yesScreen = function() {
                 return false;
             }
         }
+        var old_tr = active_tr;
+        var old_td = active_td;
         active_tr = tr_id;
         active_td = td_id;
         $('.footer').removeClass('to-front');
@@ -300,8 +265,10 @@ Camry.yesScreen = function() {
             $('.yes-overlay').addClass('active');
             setTimeout(function(){
                 yesCont.attr('style', Help.Transform('translateY(' + new_bottom + 'px)'));
-                this_option.attr('style', Help.Transform('translateY(' + option_bottom + 'px)'))
-                    .siblings().attr('style', Help.Transform('translateY(0)'));
+                this_option.attr('style', Help.Transform('translateY(' + option_bottom + 'px)'));
+                setTimeout(function(){
+                    this_option.siblings().attr('style', Help.Transform('translateY(0)'));
+                }, 500);
             }, time2);
         }, time1);
         self.setNav();
@@ -622,6 +589,11 @@ Camry.Validate = function(form, callback) {
         }
         return false;
     });
+    $('.js-show-form').on('click', function(){
+        $('#choose').slideUp();
+        $('#form').slideDown();
+        return false;
+    });
 }
 
 $(function(){
@@ -648,7 +620,6 @@ $(function(){
     });
     Camry.KSPs();
     Camry.Carousel();
-    //Camry.answer();
     Camry.yesScreen();
     Camry.noScreen();
     autosize(document.querySelectorAll('textarea'));

@@ -272,6 +272,10 @@
             font-size: 13rem / $fs;
             margin-top: 10rem / $fs;
         }
+
+        .top__btns {
+            margin-top: 10rem / $fs;
+        }
     }
 
     .block__form {
@@ -297,5 +301,13 @@
             font-size: 13rem / $fs;
             text-transform: uppercase;
         }
+    }
+
+    .block__form-cont {
+        display: none;
+    }
+
+    .block__choose {
+        padding-bottom: 70rem / $fs;
     }
 }
